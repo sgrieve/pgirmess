@@ -25,7 +25,9 @@ write.cl2grass(mescont, filename)
 
 \author{ Patrick Giraudoux <pgiraudo@univ-fcomte.fr> }
 
-\seealso{ \code{\link{contourLines}}, \code{\link{write.pts2grass}} }
+\seealso{ \code{\link[grDevices]{contourLines}}, \code{\link{write.pts2grass}} }
+
+
 \examples{
  x<-1:nrow(volcano)
  y<-1:ncol(volcano)

@@ -6,7 +6,7 @@
 
 \title{ Model selection according to information theoretic methods }
 \description{
- Handles lm, glm and list of models lm, glm, lme and nlme objects and provides parameters to compare models according to Anderson et al. (1998)
+ Handles lm, glm and list of models lm, glm, nls, lme and nlme objects and provides parameters to compare models according to Anderson et al. (1998)
 }
 \usage{
     selMod(aModel, Order = "AICc", ...)
@@ -25,16 +25,30 @@
 
 \details{
   This function provides parameters used in the information theoretic methods for model comparisons. lm and glm objects can be passed directly as the upper scope of term addition (all terms added). 
-  Every model from 'y~1' is computed adding one term at a time until the upper scope model is derived. A list of user specified lm, glm, lme or nlme objects can alternately be passed.
+  Every model from 'y~1' is computed adding one term at a time until the upper scope model is derived. This is a stepwise analysis where the terms are added sequentially and this does NOT provide all combinations of terms and interactions. 
+  A list of user specified lm, glm, lme or nlme objects to compare can alternately be passed.
 }
 
 \value{
- A list with the following items:
-  \item{AIC}{a data.frame including LL, the maximized log-likelihood; K the number of estimated parameters; N2K, number of observations/K; AIC, the Akaike index criterion; deltAIC, the difference between AIC and the lowest AIC value; \eqn{w_i}, the Akaike weights; AICc, the second order Akaike criterion; deltAICc, the difference between AICc and the lowest AICc value; \eqn{w_ic}, the AICc weights }
-  \item{models}{the list of models}
+ A dataframe including:
+ \itemize
+ \item{LL}{the maximized log-likelihood}
+ \item{K}{the number of estimated parameters}
+ \item{N2K}{the number of observations/K}
+ \item{AIC}{the Akaike index criterion}
+ \item{deltAIC}{the difference between AIC and the lowest AIC value}
+ \item{\eqn{w_i}}{the Akaike weights}
+ \item{deltAIC}{the difference between AICc and the lowest AICc value}
+ \item{\eqn{w_ic}}{the AICc weights}
+ 
+ The models examined from first to last are stored as attribute
+ 
 }
 \references{ 
-    Anderson, D.R., Link, W.A., Johnson, D.H. and Burnham, K.P. (2001). Suggestions for presenting the results of data analyses. Journal of Wildlife Management, 65, 373-378; Burnham, K.P. and Anderson, D.R. (2002) Model Selection and Multimodel Inference: a Practical Information-Theoretic Approach, 2nd edn., Springer-Verlag, New York. 353 pp
+\itemize{
+   \item{.}{Anderson, D.R., Link, W.A., Johnson, D.H. and Burnham, K.P. (2001). Suggestions for presenting the results of data analyses. Journal of Wildlife Management, 65, 373-378}
+   \item{.}{Burnham, K.P. and Anderson, D.R. (2002) Model Selection and Multimodel Inference: a Practical Information-Theoretic Approach, 2nd edn., Springer-Verlag, New York. 353 pp}
+ }
  }
 \author{ Patrick Giraudoux and David Pleydell: pgiraudo@univ-fcomte.fr, dpleydel@univ-fcomte.fr }
 
@@ -46,6 +60,8 @@
  anorex.2 <- glm(Postwt ~ Prewt*Treat, family=gaussian,data = anorexia)
  selMod(anorex.2)
  anorex.3<-lm(Postwt ~ Prewt+Treat, data = anorexia)
- selMod(list(anorex.1,anorex.2,anorex.3))
+ mycomp<-selMod(list(anorex.1,anorex.2,anorex.3))
+ mycomp
+ attributes(mycomp)$models
 }
 \keyword{ models }

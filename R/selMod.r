@@ -42,7 +42,7 @@ selMod.lm <- function(aModel, Order="AICc", dropNull=FALSE, selconv=TRUE,...){  
 
 
 selMod.list <- function(aModel, Order="AICc",...){   # permissible values for Order are "AIC" or "AICc" (the default)
-    if(!is.list(aModel)) {stop("aModel must be a list")}                                  
+    if(!is.list(aModel)) {stop("aModel must be a list")}                                 
     N <- length(residuals(aModel[[1]]))
     models <- aModel
     myAIC <- rep(NA,length(models))
@@ -61,10 +61,8 @@ selMod.list <- function(aModel, Order="AICc",...){   # permissible values for Or
             if (substr(forms[i],j,j) == "~") {n<-j;break}
         }   
         forms[i]<-substr(forms[i],n+2,nchar(forms[i]))
-        #if (names(models[[i]]$coef[1])=="(Intercept)") {Int<-TRUE}
+        
     }
-    #trm <- names(models[K==max(K)][[1]]$coef)
-    #if (Int & trm[1]!="(Intercept)") {trm <- c("(Intercept)",trm)}    
 
     AICc <- myAIC+2*K*(K+1)/(N-K-1)
     deltAIC <- myAIC-min(myAIC)
@@ -74,11 +72,12 @@ selMod.list <- function(aModel, Order="AICc",...){   # permissible values for Or
     wic <- exp(-(1/2)*deltAICc)
     wic <- wic/sum(wic)
 
-    L <- list(AIC=data.frame(model=forms,LL=LL,K=K,N2K,AIC=myAIC,deltAIC=deltAIC,w_i=round(wi,2),AICc=AICc,deltAICc=deltAICc,w_ic=round(wic,2)),models=models) 
+    L <- data.frame(model=forms,LL=LL,K=K,N2K,AIC=myAIC,deltAIC=deltAIC,w_i=round(wi,2),AICc=AICc,deltAICc=deltAICc,w_ic=round(wic,2)) 
     if (Order=="AIC") {
-        L$AIC <- L$AIC[order(L$AIC$deltAIC),]
+        L <- L[order(L$deltAIC),]
     } else {
-        L$AIC <- L$AIC[order(L$AIC$deltAICc),]
+        L <- L[order(L$deltAICc),]
     }
+    attributes(L)$models<-models
     L
 }
