@@ -6,7 +6,7 @@
 
 \title{ Model selection according to information theoretic methods }
 \description{
- Handles lm, glm and list of models lm, glm, nls, lme and nlme objects and provides parameters to compare models according to Anderson et al. (1998)
+ Handles lm, glm and list of  e.g. lm, glm, nls, lme and nlme objects and provides parameters to compare models according to Anderson et al. (1998)
 }
 \usage{
     selMod(aModel, Order = "AICc", ...)
@@ -16,17 +16,22 @@
 }
 
 \arguments{
-  \item{aModel}{ a lm or glm model or a list of lm or glm models }
-  \item{dropNull}{ if TRUE, drops the simplest model (e.g. 'y~1')  }
+  \item{aModel}{ a lm or glm model or a list of relevant models (see details) }
+  \item{dropNull}{ if TRUE, drops the simplest model (e.g. \eqn{y~1})  }
   \item{Order}{ if set to "AICc" (default) sort the models on this parameter, otherwise "AIC" is allowed }
   \item{selconv}{ if TRUE (default) keep the models for which convergence is obtained (glm object only) and with no anova singularity (lm and glm) }
   \item{...}{ other parameters to be passed as arguments (not used here) }
 }
 
 \details{
-  This function provides parameters used in the information theoretic methods for model comparisons. lm and glm objects can be passed directly as the upper scope of term addition (all terms added). 
-  Every model from 'y~1' is computed adding one term at a time until the upper scope model is derived. This is a stepwise analysis where the terms are added sequentially and this does NOT provide all combinations of terms and interactions. 
-  A list of user specified lm, glm, lme or nlme objects to compare can alternately be passed.
+  This function provides parameters used in the information theoretic methods for model comparisons.
+  \itemize{ 
+  \item{.}{lm and glm objects can be passed directly as the upper scope of term addition (all terms added). 
+  Every model from \eqn{y~1} is computed adding one term at a time until the upper scope model is derived. This is a stepwise analysis where the terms are added sequentially and this does NOT provide all combinations of terms and interactions.
+  } 
+  \item{.}{A list of user specified lm, glm, nls, lme or nlme objects (actually any object for which AIC and logLik functions are applicable) to compare can alternately be passed.
+  }
+  }
 }
 
 \value{
