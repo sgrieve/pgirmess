@@ -5,6 +5,6 @@ TukeyHSDs<-function(TukeyHSD.object){
 res<-TukeyHSD.object
 x<-TukeyHSD.object[[1]]
 suppressWarnings(y<-!is.nan(sqrt(x[,2]*x[,3])))
-res[[1]]<-x[y,]
+res[[1]]<-x[y,,drop=FALSE]
 res
 }
