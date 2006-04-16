@@ -83,6 +83,7 @@ for (i in 1:length(gr)) polygon(gr[[i]],border="blue")
 \dontrun{
 # Writing a polygon shapefile
 gr<-pave(coord,20,4,output="spdf") # y decreasing
+library(maptools)
 writePolyShape(gr, "myshapefilename")
 }
 

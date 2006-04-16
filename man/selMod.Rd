@@ -17,7 +17,7 @@
 
 \arguments{
   \item{aModel}{ a lm or glm model or a list of relevant models (see details) }
-  \item{dropNull}{ if TRUE, drops the simplest model (e.g. \eqn{y~1})  }
+  \item{dropNull}{ if TRUE, drops the simplest model (e.g. y\eqn{~}1)  }
   \item{Order}{ if set to "AICc" (default) sort the models on this parameter, otherwise "AIC" is allowed }
   \item{selconv}{ if TRUE (default) keep the models for which convergence is obtained (glm object only) and with no anova singularity (lm and glm) }
   \item{...}{ other parameters to be passed as arguments (not used here) }
@@ -27,7 +27,7 @@
   This function provides parameters used in the information theoretic methods for model comparisons.
   \itemize{ 
   \item{.}{lm and glm objects can be passed directly as the upper scope of term addition (all terms added). 
-  Every model from \eqn{y~1} is computed adding one term at a time until the upper scope model is derived. This is a stepwise analysis where the terms are added sequentially and this does NOT provide all combinations of terms and interactions.
+  Every model from y\eqn{\sim}{~}1 is computed adding one term at a time until the upper scope model is derived. This is a stepwise analysis where the terms are added sequentially and this does NOT provide all combinations of terms and interactions.
   } 
   \item{.}{A list of user specified lm, glm, nls, lme or nlme objects (actually any object for which AIC and logLik functions are applicable) to compare can alternately be passed.
   }
@@ -42,9 +42,9 @@
  \item{N2K}{the number of observations/K}
  \item{AIC}{the Akaike index criterion}
  \item{deltAIC}{the difference between AIC and the lowest AIC value}
- \item{\eqn{w_i}}{the Akaike weights}
+ \item{w\eqn{_}i}{the Akaike weights}
  \item{deltAIC}{the difference between AICc and the lowest AICc value}
- \item{\eqn{w_ic}}{the AICc weights}
+ \item{w\eqn{_}ic}{the AICc weights}
  
  The models examined from first to last are stored as attribute
  
