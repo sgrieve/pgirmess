@@ -1,35 +1,48 @@
 "correlog" <-
 function(coords,z,method="Moran",nbclass=NULL){
+
     x<-require(spdep);if (!x) stop("Package spdep required")
     coords<-as.matrix(coords)
     matdist<-dist(coords)
     if (is.null(nbclass)) nbclass<-nclass.Sturges(matdist)
-    etendue<-range(dist(coords))
+    etendue<-range(matdist)
     breaks1<-seq(etendue[1],etendue[2],l=nbclass+1)
     breaks2<-breaks1+0.000001
     breaks<-cbind(breaks1[1:length(breaks1)-1],breaks2[2:length(breaks2)])
-    x<-NULL;N=NULL;p=NULL
+    
+    lst.nb1<-rep(list(NA),nbclass)
+    lst.z1<-rep(list(NA),nbclass)
     for(i in 1:length(breaks[,1])){
-        z1<-z
-        nb1<-dnearneigh(coords, breaks[i,1],breaks[i,2])
-        zero<-which(card(nb1)==0)
+        lst.z1[[i]]<-z
+        lst.nb1[[i]]<-dnearneigh(coords, breaks[i,1],breaks[i,2])
+        zero<-which(card(lst.nb1[[i]])==0)
         if (length(zero)>0){ 
-            nb1<-dnearneigh(coords[-zero,], breaks[i,1],breaks[i,2])
-            z1<-z[-zero]
+            lst.nb1[[i]]<-dnearneigh(coords[-zero,], breaks[i,1],breaks[i,2])
+            lst.z1[[i]]<-z[-zero]
         }
-       xt<-switch(pmatch(method,c("Moran","Geary"),nomatch=""),
-            "1"=try(moran.test(z1, nb2listw(nb1, style="W")),silent=TRUE),
-            "2"=try(geary.test(z1, nb2listw(nb1, style="W")),silent=TRUE),
+     }
+     
+     lst.res1<-rep(list(NA),nbclass)
+     for(i in 1:length(breaks[,1])){
+        xt<-switch(pmatch(method,c("Moran","Geary"),nomatch=""),
+            "1"=try(moran.test(lst.z1[[i]], nb2listw(lst.nb1[[i]], style="W")),silent=TRUE),
+            "2"=try(geary.test(lst.z1[[i]], nb2listw(lst.nb1[[i]], style="W")),silent=TRUE),
             stop("Method must be 'Moran' or 'Geary'"))
         if(inherits(xt,"try-error")) {stop("Bad selection of class breaks, try another one...")}
-        else x<-c(x,xt$estimate[1]);p<-c(p,xt$p.value);N<-c(N,sum(card(nb1)))
-        meth<-names(xt[[3]][1])
-    }
- names(x)<-NULL
- res<-cbind(dist.class=rowMeans(breaks),coef=x,p.value=p,n=N)
- attributes(res)<-c(attributes(res),list(Method=meth))
- class(res)<-c("correlog","matrix")
- res
+        else {
+            x<-xt$estimate[1]
+            p<-xt$p.value
+            N<-sum(card(lst.nb1[[i]]))
+        }
+        lst.res1[[i]]<-c(x=x,p=p,N=N)
+      }
+      
+      meth<-names(xt[[3]][1])
+      mat<-matrix(unlist(lst.res1),ncol=3,byrow=TRUE)
+      res<-cbind(dist.class=rowMeans(breaks),coef=mat[,1],p.value=mat[,2],n=mat[,3])
+      attributes(res)<-c(attributes(res),list(Method=meth))
+      class(res)<-c("correlog","matrix")
+      res
 }
 
 
