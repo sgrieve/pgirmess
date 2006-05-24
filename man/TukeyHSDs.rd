@@ -1,8 +1,8 @@
 \name{TukeyHSDs}
 \alias{TukeyHSDs}
-\title{ Simplify the list of a TuckeyHSD object keeping the significant differences only. }
+\title{ Simplify the list of a TukeyHSD object keeping the significant differences only. }
 \description{
-  Simplify the list of a TuckeyHSD object keeping the significant differences only.
+  Simplify the list of a TukeyHSD object keeping the significant differences only.
 }
 \usage{
 TukeyHSDs(TukeyHSD.object)
@@ -29,4 +29,4 @@ TukeyHSDs(TukeyHSD.object)
      myobject
      TukeyHSDs(myobject)
   }
-\keyword{ htest }% at least one, from doc/KEYWORDS
+\keyword{ htest }
