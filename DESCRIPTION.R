@@ -9,4 +9,3 @@ Suggests: maptools, splancs, spdep, sp, gstat
 Description: Miscellaneous functions for analysis and display of ecological and spatial data
 License: GPL version 2 or newer
 URL: http://lbe.univ-fcomte.fr
-Packaged: Sat Jun  3 14:37:23 2006; Giraudoux

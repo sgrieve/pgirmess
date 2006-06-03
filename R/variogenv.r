@@ -12,7 +12,7 @@ variogenv<-function(formula,locations, data, R=99,...){
     res
 }
     
-plot.variogenv<-function(x,txt=TRUE,txtcex=0.6,type="b",main="",ylab="semi-variance",xlab="distance",...){
+plot.variogenv<-function(x,txt=TRUE,txtcex=0.6,ylab="semi-variance",xlab="distance",...){
     if (!inherits(x, "variogenv")) stop("Object must be of class 'variogenv'")
     plot(range(x$dist),range(x[,3:5]),type="n",xlab=xlab,ylab=ylab,...)
     points(x$dist,x$vgm.obs)
