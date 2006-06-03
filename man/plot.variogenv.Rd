@@ -10,7 +10,7 @@
 }
 \usage{
 
-\method{plot}{variogenv}(x, txt=TRUE,txtcex=0.6,type,main,ylab,xlab,...)
+\method{plot}{variogenv}(x, txt=TRUE,txtcex=0.6,ylab,xlab,...)
 
 }
 
@@ -18,10 +18,8 @@
   \item{x}{ an object of the class "variogenv"', typically an output of the function 'variogenv' }
   \item{txt}{ if TRUE (default), the number of paired points in each bin is displayed }
   \item{txtcex}{ character size expansion for txt }
-  \item{type}{ 1-character string giving the type of plot desired. See \code{plot.default} }
-  \item{main}{ a main title for the plot }
-  \item{xlab}{ a label for the x axis }
-  \item{ylab}{ a label for the y axis }
+  \item{xlab}{ label for the x axis }
+  \item{ylab}{ label for the y axis }
   \item{\dots}{ further arguments to be passed }
 }
 
