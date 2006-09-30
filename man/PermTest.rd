@@ -9,11 +9,11 @@
   Permutation test for lm, lme and glm (binomial and Poisson) objects
 }
 \usage{
-	PermTest(obj, B=1000,...)
+    PermTest(obj, B=1000,...)
 
-	\method{PermTest}{lm}(obj, B=1000,...)
-	\method{PermTest}{lme}(obj, B=1000,...)
-	\method{PermTest}{glm}(obj, B=1000,...)
+    \method{PermTest}{lm}(obj, B=1000,...)
+    \method{PermTest}{lme}(obj, B=1000,...)
+    \method{PermTest}{glm}(obj, B=1000,...)
 }
 
 \arguments{
@@ -46,7 +46,7 @@ PermTest(mylm,B=250)
     counts <- c(18,17,15,20,10,20,25,13,12)
     outcome <- gl(3,1,9)
     treatment <- gl(3,3)
-    glm.D93 <- glm(counts ~ outcome + treatment, family=poisson())
+    glm.D93 <- glm(counts ~ outcome + treatment, family=poisson)
     PermTest(glm.D93,B=250)
 
 library(nlme)
