@@ -2,14 +2,13 @@
 UseMethod("PermTest")
 }
 
-"PermTest.lm"<-function(obj,B=1000,...){
+PermTest.lm<-function(obj,B=1000,...){
 
     # Giraudoux 24.10.2004 permutation test for linear models
     # obj = a lm object
     # B = permutation number (default = 1000)
     # values: a list including a data.frame of the p.values of each independent variable F
     # and the call
-    ptm <- proc.time()
     an<-anova(obj)
     Fobs<-an[[4]]
     n<-rep(0,length(an[[4]])-1)
@@ -29,7 +28,6 @@ UseMethod("PermTest")
     output<-list(resultats=n, B=B, call=match.call())
     class(output)<-c("PermTest","list")
     output
-    proc.time()-ptm
     
 }
 
