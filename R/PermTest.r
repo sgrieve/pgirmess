@@ -71,13 +71,15 @@ PermTest.lm<-function(obj,B=1000,...){
     # value: a data.frame of the p.values of each independent variable F
     # values: a list including a data.frame of the p.values of each independent variable F
     # and the call
-    if (!any(family(obj)$family=="poisson",family(obj)$family=="binomial"))
+    if (!any(family(obj)$family=="poisson",family(obj)$family=="binomial",family(obj)$family=="quasipoisson"))
         stop("method not implemented for ",family(obj)$family," family")
        
     an<-anova(obj)
     Fobs<-an$Deviance
     n<-rep(0,length(an$Deviance)-1)
+    attach(obj$data)
     resp<-eval(terms(formula(obj))[[2]])
+    detach(obj$data)
     
     for (i in 1:B){
         if (is.matrix(resp)) glm1<-update(obj,permcont(.)~.)

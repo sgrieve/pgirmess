@@ -6,7 +6,7 @@
 
 \title{ Model selection according to information theoretic methods }
 \description{
- Handles lm, glm and list of  e.g. lm, glm, nls, lme and nlme objects and provides parameters to compare models according to Anderson et al. (1998)
+ Handles lm, glm and list of  e.g. lm, glm, nls, lme and nlme objects and provides parameters to compare models according to Anderson et al. (2001)
 }
 \usage{
     selMod(aModel, Order = "AICc", ...)
