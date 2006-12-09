@@ -1,6 +1,6 @@
 \name{polycirc}
 \alias{polycirc}
-%- Also NEED an '\alias' for EACH other topic documented here.
+
 \title{ Computes the polygon coordinates of a circle }
 \description{
   Computes the polygon coordinates of a circle
@@ -30,4 +30,4 @@ polygon(polycirc(5),col="blue")
 polygon(polycirc(2,c(5,5)), col="red")
 
 }
-\keyword{ manip }% at least one, from doc/KEYWORDS
+\keyword{ manip }

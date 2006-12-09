@@ -1,10 +1,10 @@
 \name{shannonbioboot}
 \alias{shannonbioboot}
 
-\title{ Boostrap Shannon\'s and equitability indices 
+\title{ Boostrap Shannon's and equitability indices 
 }
 \description{
-  Boostrap Shannon\'s and equitability indices and return an object of class boot. Confidence intervals can be computed with boot.ci().
+  Boostrap Shannon's and equitability indices and return an object of class boot. Confidence intervals can be computed with boot.ci().
 }
 \usage{
 shannonbioboot(data1, B = 1000)
