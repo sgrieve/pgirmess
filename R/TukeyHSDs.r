@@ -1,3 +1,4 @@
+
 TukeyHSDs<-function(TukeyHSD.object){
 # Patrick Giraudoux 19.1.2004
 # Simplify the list of TuckeyHSD objet keeping
