@@ -6,7 +6,7 @@
   print method for objects of class 'mc'
 }
 \usage{
-print.mc(x, ...)
+    \method{print}{mc}(x, ...)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

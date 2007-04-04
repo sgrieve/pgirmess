@@ -43,7 +43,7 @@
  \item{AIC}{the Akaike index criterion}
  \item{deltAIC}{the difference between AIC and the lowest AIC value}
  \item{w\eqn{_}i}{the Akaike weights}
- \item{deltAICc}{the difference between AICc and the lowest AICc value}
+ \item{deltAICc}{the difference between AICc and the lowest AICc value; advised to be used when n2K \eqn{<} 40}
  \item{w\eqn{_}ic}{the AICc weights}
  
  The models examined from first to last are stored as attribute
