@@ -17,14 +17,9 @@
     \item{biomasse:}{a numeric vector for the weight of each dietary item}
   }
 }
-\details{
-  to do
-}
-\source{
-Data used in M. Amroun doctorat thesis. Mansour Amroun, University of Tizi-Ouzou, Faculté des Sciences Biologiques et Agronomiques, 15000 Tizi-Ouzou, Algérie
-}
+
 \references{
-  M. Amroun, P. Giraudoux and P. Delattre 2005 Comparative study of the diets of two sympatric carnivores - the Jackal (Canis aureus) and the Genet (Genetta genetta) - at two sites in Kabylia, Algeria. Mammalia, submitted
+  M. Amroun, P. Giraudoux and P. Delattre 2006 Comparative study of the diets of two sympatric carnivores - the Jackal (Canis aureus) and the Genet (Genetta genetta) - at two sites in Kabylia, Algeria. Mammalia, 70 (3/4): 247-254.
 }
 
 \keyword{datasets}

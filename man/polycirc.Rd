@@ -12,10 +12,10 @@ polycirc(radius, pts = c(0, 0), nbr = 50)
 \arguments{
   \item{radius}{ the length of the radius. }
   \item{pts}{ the coordinates of the center. }
-  \item{nbr}{ the number of segments required to draw the perimeter.  }
+  \item{nbr}{ the number of segments required to draw the perimeter  }
 }
 \details{
-  The matrix of coordinates  can then be used with the function polygon.
+  The matrix of coordinates  can then be used with the function polygon
 }
 \value{
   A matrix of coordinates.
