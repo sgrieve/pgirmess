@@ -63,5 +63,5 @@ function(coords,z,method="Moran",nbclass=NULL){
     if (!inherits(x, "correlog")) stop("Object must be of class 'correlog'")
     cat(attributes(x)$Method,"\n")
     attributes(x)<-attributes(x)[1:2]
-    print(x[,,drop=F])
+    print(x[,,drop=FALSE])
 }
