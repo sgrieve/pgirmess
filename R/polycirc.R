@@ -15,6 +15,8 @@ angles<-angles[-length(angles)]
         circ<-rbind(circ,cbind(radius*sin(i),radius*cos(i)))
     }
     
-    return(cbind(circ[,1]+pts[1],circ[,2]+pts[2]))                   
+    x<-cbind(circ[,1]+pts[1],circ[,2]+pts[2])
+    x<-rbind(x,x[1,])
+    return(x) 
 }
 

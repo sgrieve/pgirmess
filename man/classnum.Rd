@@ -32,6 +32,8 @@ classnum(x, breaks = "Sturges")
 
 \author{ Patrick Giraudoux, pgiraudo@univ-fcomte.fr }
 
+\seealso{ \code{\link{cut}} }
+
 \examples{
 x<-rnorm(30)
 classnum(x)
