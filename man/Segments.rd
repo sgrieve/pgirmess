@@ -13,7 +13,6 @@ Segments(mydata, ...)
 }
 \details{
   a wrapper to 'segments' to handle coordinates passed as vector, matrix or data frame. Any vector is turned into a matrix of four columns.
-}
 
 }
 \author{  Patrick Giraudoux <pgiraudo@univ-fcomte.fr> }
@@ -32,5 +31,5 @@ Segments(mydata, ...)
  plot(myvec,myvec,type="n",xlab="",ylab="")
  Segments(myvec)
   }
-}
+
 \keyword{ hplot }

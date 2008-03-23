@@ -31,6 +31,6 @@ jackal<-preybiom[site=="Y" & sp=="C",5:6]
 genet<-preybiom[site=="Y" & sp=="G",5:6]
 
 piankabioboot(jackal,genet,B=100)
-  }
+  
 }
 \keyword{ htest }% at least one, from doc/KEYWORDS
