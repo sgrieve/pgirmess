@@ -23,7 +23,7 @@ diag2edge(cordseg)
 
 \author{  Patrick Giraudoux <pgiraudo@univ-fcomte.fr> }
 
-}
+
 \seealso{ \code{\link[pgirmess]{pave}} }
 \examples{
 

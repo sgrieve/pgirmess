@@ -1,5 +1,5 @@
 "correlog" <-
-function(coords,z,method="Moran",nbclass=NULL){
+function(coords,z,method="Moran",nbclass=NULL,...){
 
     x<-require(spdep);if (!x) stop("Package spdep required")
     coords<-as.matrix(coords)
@@ -9,6 +9,7 @@ function(coords,z,method="Moran",nbclass=NULL){
     breaks1<-seq(etendue[1],etendue[2],l=nbclass+1)
     breaks2<-breaks1+0.000001
     breaks<-cbind(breaks1[1:length(breaks1)-1],breaks2[2:length(breaks2)])
+    breaks[1,1] <- breaks[1,1] - 1e-6 # to avoid exclusion of points on the limit (Colin Beale)
     
     lst.nb1<-rep(list(NA),nbclass)
     lst.z1<-rep(list(NA),nbclass)
@@ -25,8 +26,8 @@ function(coords,z,method="Moran",nbclass=NULL){
      lst.res1<-rep(list(NA),nbclass)
      for(i in 1:length(breaks[,1])){
         xt<-switch(pmatch(method,c("Moran","Geary"),nomatch=3),
-            try(moran.test(lst.z1[[i]], nb2listw(lst.nb1[[i]], style="W")),silent=TRUE),
-            try(geary.test(lst.z1[[i]], nb2listw(lst.nb1[[i]], style="W")),silent=TRUE),
+            try(moran.test(lst.z1[[i]], nb2listw(lst.nb1[[i]], style="W")),silent=TRUE,...),
+            try(geary.test(lst.z1[[i]], nb2listw(lst.nb1[[i]], style="W")),silent=TRUE,...),
             stop("Method must be 'Moran' or 'Geary'"))
         if(inherits(xt,"try-error")) {stop("Bad selection of class breaks, try another one...")}
         else {

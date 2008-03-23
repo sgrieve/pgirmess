@@ -21,7 +21,7 @@ polycirc2(radius = 1, center = c(0, 0), edges = 50, init = pi/2, angle = pi/2)
 }
 \value{ A matrix of coordinates}
 
-}
+
 \seealso{ \code{\link{polygon}},\code{\link{polycirc}}, \code{\link[plotrix]{floating.pie}} }
 
 \examples{

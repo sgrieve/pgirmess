@@ -8,7 +8,7 @@
   Computes Moran's or Geary's coefficients on distance classes from a set of spatial coordinates and corresponding z values
 }
 \usage{
-correlog(coords, z, method="Moran", nbclass = NULL)
+correlog(coords, z, method="Moran", nbclass = NULL,...)
 }
 
 \arguments{
@@ -16,9 +16,10 @@ correlog(coords, z, method="Moran", nbclass = NULL)
   \item{z}{ a vector for the values at each location. Must have the same length as the row number of coords }
   \item{method}{ the method used. Must be "Moran" (default) or "Geary" }
   \item{nbclass}{number of bins. If NULL Sturges method is used to compute an optimal number}
+  \item{\dots}{further arguments to pass to e.g. \code{\link[spdep]{moran.test}} or \code{\link[spdep]{geary.test}}}
 }
 \details{
-  Uses the library spdep including moran.test() or geary.test(). These methods assume the data are normally distributed. Distances are euclidian and in the same unit as the spatial coordinates.  Moran's Ho: I values larger than 0 due to chance; 
+  Uses the library spdep including \code{\link[spdep]{moran.test}} or \code{\link[spdep]{geary.test}}. These methods assume the data are normally distributed. Distances are euclidian and in the same unit as the spatial coordinates.  Moran's Ho: I values larger than 0 due to chance; 
   Geary's Ho: C values lesser than 1 due to chance. Correlog has print and plot methods; statistically significant values (p<0.05) are plotted in red.
 }
 \value{
@@ -29,8 +30,8 @@ correlog(coords, z, method="Moran", nbclass = NULL)
   \item{n }{the number of pairs}
 }
 \references{ see library spdep }
-\author{ Patrick Giraudoux pgiraudo@univ-fcomte.fr }
-
+\author{ Patrick Giraudoux pgiraudo@univ-fcomte.fr and Colin Beale c.beale@macaulay.ac.uk}
+ 
 \section{Warning }{Computing can take a long time for large data sets} 
 
 \seealso{ \code{\link[spdep]{geary.test}}, \code{\link[spdep]{moran.test}} }
