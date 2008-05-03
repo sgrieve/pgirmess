@@ -1,7 +1,8 @@
 \name{distSeg}
 \alias{distSeg}
 
-\title{ Computes the distances between the top coordinates of segments. }
+
+\title{ Computes distances between the top coordinates of segments. }
 \description{
   Computes the distances between the top coordinates of segments.  
 }
@@ -30,7 +31,7 @@ distSeg(mydata,decdeg=FALSE)
 
 \author{ Patrick Giraudoux <pgiraudo@univ-fcomte.fr> }
 
-\seealso{ \code{\link[pgirmess]{distNode}}, \code{\link[pgirmess]{distTot}}, \code{\link[pgirmess]{distShp}},\code{\link[pgirmess]{distPolylines}} }
+\seealso{ \code{\link[pgirmess]{distNode}}, \code{\link[pgirmess]{distTot}}, \code{\link[pgirmess]{distShp}}, \code{\link[pgirmess]{distPolylines}} }
 
 \examples{
 x1<-rnorm(20)
@@ -39,6 +40,6 @@ x2<-rnorm(20)
 y2<-rnorm(20)
 mydata<-cbind(x1,y1,x2,y2)
 distSeg(mydata)
-  }
+}
 
 \keyword{ spatial }
