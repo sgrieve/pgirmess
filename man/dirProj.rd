@@ -25,7 +25,7 @@ Computings are based on euclidian distance. Therefore, the coordinates should be
 
 \examples{
 
-df<-data.frame(x1=0,y1=0,alpha=runif(3,0,380),d=runif(3,0,1))
+df<-data.frame(x1=0,y1=0,alpha=runif(3,0,360),d=runif(3,0,1))
 df
 plot(-1:1,-1:1,type="n")
 points(0,0,pch=19)

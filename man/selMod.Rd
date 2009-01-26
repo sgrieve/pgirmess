@@ -36,7 +36,7 @@
 
 \value{
  A dataframe including:
- \itemize
+ 
  \item{LL}{the maximized log-likelihood}
  \item{K}{the number of estimated parameters}
  \item{N2K}{the number of observations/K}
@@ -45,7 +45,7 @@
  \item{w\eqn{_}i}{the Akaike weights}
  \item{deltAICc}{the difference between AICc and the lowest AICc value; advised to be used when n2K \eqn{<} 40}
  \item{w\eqn{_}ic}{the AICc weights}
- 
+
  The models examined from first to last are stored as attribute
  
 }
