@@ -5,6 +5,7 @@ UseMethod("selMod")
 selMod.lm <- function(aModel, Order="AICc", dropNull=FALSE, selconv=TRUE,...){   # permissible values for Order are "AIC" or "AICc" (the default)
                                                         # dropNull enables the simplest model (e.g. y~1) to be dropped
                                                         # glm objects inherit from lm and thus this function also handles glms
+		if (length(grep("offset(",deparse(attributes(terms(aModel))$variables),fixed = TRUE))!=0) stop("Automated stepwise analysis cannot still be performed with an offset term, please use a list of user specified models as first arguments instead")
     trm <- attributes(terms(aModel))$term.labels
     models <- rep(list(NA),length(trm)+1)
     models[[1]] <- update(aModel,.~1)

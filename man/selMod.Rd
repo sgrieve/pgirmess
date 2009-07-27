@@ -27,7 +27,7 @@
   This function provides parameters used in the information theoretic methods for model comparisons.
   \itemize{ 
   \item{.}{lm and glm objects can be passed directly as the upper scope of term addition (all terms added). 
-  Every model from y\eqn{\sim}{~}1 is computed adding one term at a time until the upper scope model is derived. This is a stepwise analysis where the terms are added sequentially and this does NOT provide all combinations of terms and interactions.
+  Every model from y\eqn{\sim}{~}1 is computed adding one term at a time until the upper scope model is derived. This is a stepwise analysis where the terms are added sequentially and this does NOT provide all combinations of terms and interactions. Offset terms cannot be proceeded here.
   } 
   \item{.}{A list of user specified lm, glm, nls, lme or nlme objects (actually any object for which AIC and logLik functions are applicable) to compare can alternately be passed.
   }
@@ -42,9 +42,9 @@
  \item{N2K}{the number of observations/K}
  \item{AIC}{the Akaike index criterion}
  \item{deltAIC}{the difference between AIC and the lowest AIC value}
- \item{w\eqn{_}i}{the Akaike weights}
+ \item{w_i}{the Akaike weights}
  \item{deltAICc}{the difference between AICc and the lowest AICc value; advised to be used when n2K \eqn{<} 40}
- \item{w\eqn{_}ic}{the AICc weights}
+ \item{w_ic}{the AICc weights}
 
  The models examined from first to last are stored as attribute
  
