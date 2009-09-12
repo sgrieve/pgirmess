@@ -1,14 +1,9 @@
 friedmanmc<-function(y,groups,blocks,probs=0.05){
 
-    if (is.matrix(y)) {
+    if ((is.matrix(y)) | (is.data.frame(y))){
         groups <- factor(c(col(y)))
         blocks <- factor(c(row(y)))
-    } 
-    
-    if (is.data.frame(y)) {                 
-        groups <- factor(c(col(y)))     
-        blocks <- factor(c(row(y)))     
-    }                                   
+    }                          
     
     else {
         if (any(is.na(groups)) || any(is.na(blocks))) 
@@ -22,6 +17,7 @@ friedmanmc<-function(y,groups,blocks,probs=0.05){
     }
 
     N<-length(levels(blocks));k<-length(levels(groups))
+    y <- y[order(groups,blocks)]
     mat<-matrix(y,nrow=N,ncol=k,byrow=FALSE)
     for (i in 1:length(mat[,1])) mat[i,]<-rank(mat[i,])
     sumrank<-colSums(mat)

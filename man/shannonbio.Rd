@@ -20,7 +20,7 @@ shannonbio(data1)
 }
 \author{ Patrick Giraudoux <pgiraudo@univ-fcomte.fr> }
 
-\seealso{ \code{\link[pgirmess]{shannon}}, \code{\link[pgirmess]{difshannonbiom}} }
+\seealso{ \code{\link[pgirmess]{shannon}}, \code{\link[pgirmess]{difshannonbio}} }
 \examples{
 
 data(preybiom)
