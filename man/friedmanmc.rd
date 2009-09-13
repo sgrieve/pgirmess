@@ -25,7 +25,6 @@ friedmanmc(y, groups, blocks,probs=0.05)
     \item{dif.com}{a data.frame with observed and critical differences}
 }
 \references{ Siegel & Castellan (1988) Non parametric statistics for the behavioural sciences. Mc Graw Hill Int. Edt.  }
-\author{ Patrick Giraudoux <pgiraudo@univ-fcomte.fr> }
 
 \seealso{ \code{\link{friedman.test}}}
 \examples{
@@ -39,6 +38,7 @@ friedmanmc(y, groups, blocks,probs=0.05)
   mymatrix<-matrix(score,nc=3)
   friedman.test(mymatrix)
   friedmanmc(mymatrix)
+  detach(siegelp179)
   
 }
 \keyword{ htest }

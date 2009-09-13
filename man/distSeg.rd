@@ -31,7 +31,7 @@ distSeg(mydata,decdeg=FALSE)
 
 \author{ Patrick Giraudoux <pgiraudo@univ-fcomte.fr> }
 
-\seealso{ \code{\link[pgirmess]{distNode}}, \code{\link[pgirmess]{distTot}}, \code{\link[pgirmess]{distShp}}, \code{\link[pgirmess]{distPolylines}} }
+\seealso{ \code{\link[pgirmess]{distNode}}, \code{\link[pgirmess]{distTot}}, \code{\link[pgirmess]{distTotshp}}, \code{\link[pgirmess]{distPolylines}} }
 
 \examples{
 x1<-rnorm(20)
