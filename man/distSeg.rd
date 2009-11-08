@@ -28,10 +28,7 @@ distSeg(mydata,decdeg=FALSE)
   A vector of distances
 }
 
-
-\author{ Patrick Giraudoux <pgiraudo@univ-fcomte.fr> }
-
-\seealso{ \code{\link[pgirmess]{distNode}}, \code{\link[pgirmess]{distTot}}, \code{\link[pgirmess]{distTotshp}}, \code{\link[pgirmess]{distPolylines}} }
+\seealso{\code{\link[pgirmess]{distNode}}, \code{\link[pgirmess]{distTot}}}
 
 \examples{
 x1<-rnorm(20)

@@ -24,9 +24,7 @@ distTot(pts,decdeg=FALSE)
   A numeric distance.
 }
 
-\author{ Patrick Giraudoux <pgiraudo@univ-fcomte.fr> }
-
-\seealso{ , \code{\link{distNode}}, \code{\link{distTotshp}},\code{\link{distSeg}},\code{\link{distPolylines}} }
+\seealso{ , \code{\link{distNode}}, \code{\link{distSeg}} }
 \examples{
 x<-c(10,56,100)
 y<-c(23,32,150)
