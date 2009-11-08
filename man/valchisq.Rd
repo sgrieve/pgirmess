@@ -13,13 +13,17 @@ valchisq(matr)
   \item{matr}{ a matrix (contingency table) }
 }
 \details{
-  Computes the values of the chi-square in each cell of a contingency table
+Computes the values of the chi-square in each cell of a contingency table
 }
+
+\note{
+No correction (e.g. Yate's etc.) is done !
+}
+
 \value{
   A matrix with the chi-square values computed
 }
 
-\author{Patrick Giraudoux <pgiraudo@univ-fcomte.fr}
 
 \seealso{valat, chisq.test }
 \examples{

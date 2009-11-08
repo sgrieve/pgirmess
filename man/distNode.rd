@@ -25,9 +25,8 @@ distNode(pts,decdeg=FALSE)
 \value{
   A vector of distances
 }
-\author{ Patrick Giraudoux <pgiraudo@univ-fcomte.fr> }
 
-\seealso{ \code{\link{distTot}}, \code{\link{distTotshp}}, \code{\link{distSeg}},\code{\link{distPolylines}} }
+\seealso{ \code{\link{distTot}}, \code{\link{distSeg}} }
 \examples{
 x<-c(10,56,100)
 y<-c(23,32,150)
