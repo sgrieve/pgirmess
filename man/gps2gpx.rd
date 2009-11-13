@@ -3,7 +3,7 @@
 
 \title{Download waypoints or tracks from a GPS to a gpx file}
 \description{
- Download waypoints or tracks from a GPS to a file or to the console gpx formatted
+ Download waypoints or tracks from a GPS to a gpx file or to the console gpx formatted
 }
 \usage{
 gps2gpx(filename="",i="garmin",f = "usb:", type = "w", invisible = TRUE)
@@ -17,7 +17,7 @@ gps2gpx(filename="",i="garmin",f = "usb:", type = "w", invisible = TRUE)
 }
 
 \details{
-  A .gpx suffix is added if not included in the filename. The gpx file can then be read e.g. using \code{\link[rgdal]{readOGR}} to a sp spatial object. Ex: readOGR("filename.gpx", "waypoints", drop_unsupported_fields=TRUE),, or uploaded to a GPS}
+The function calls gpsbabel via the system. The gpsbabel program must be present and on the user's PATH for the function to work see \url{http://www.gpsbabel.org}. A .gpx suffix is added if not included in the filename. The gpx file can then be read e.g. using \code{\link[rgdal]{readOGR}} to a sp spatial object. Ex: readOGR("filename.gpx", "waypoints", drop_unsupported_fields=TRUE), or uploaded to a GPS}
 
 \seealso{ \code{\link[rgdal]{readOGR}},\code{\link[pgirmess]{uploadGPS}}}
 

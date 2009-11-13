@@ -18,7 +18,7 @@ readVista(i = "garmin", f = "usb:", type="w", seg=FALSE, invisible=TRUE)
   \item{invisible}{Under Windows, do not open an extra window}
 }
 \details{
- The function calls gpsbabel via the system. The gpsbabel program must be present and on the user's PATH for the function to work see <http://www.gpsbabel.org/>. The function has been tested on the following Garmin GPS devices: Etrex Summit, Etrex Vista Cx and GPSmap 60CSx.
+ The function calls gpsbabel via the system. The gpsbabel program must be present and on the user's PATH for the function to work see \url{http://www.gpsbabel.org}. The function has been tested on the following Garmin GPS devices: Etrex Summit, Etrex Vista Cx and GPSmap 60CSx.
 }
 
 \value{

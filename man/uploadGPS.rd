@@ -15,7 +15,7 @@ uploadGPS(gpx, f = "usb:",type="w")
   \item{type}{'w' for waypoints (default), 't' for track}
 }
 \details{
-  This function uploads waypoints or a track to a garmin GPS from a '.gpx' file. gpsbabel is called via the system. Therefore gpsbabel must be installed and on the user's path,  see \url{http://www.gpsbabel.org/}. If not the default, device interface should be something as "usb:", "usb:1", or on linux "/dev/ttyUSB0", etc.
+  This function uploads waypoints or a track to a garmin GPS from a '.gpx' file. gpsbabel is called via the system. Therefore gpsbabel must be installed and on the user's path,  see \url{http://www.gpsbabel.org}. If not the default, device interface should be something as "usb:", "usb:1", or on linux "/dev/ttyUSB0", etc.
 }
 
 \section{Warning }{
