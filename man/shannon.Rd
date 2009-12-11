@@ -13,7 +13,7 @@ shannon(vect, proba=TRUE)
   \item{proba}{ FALSE if the vector is frequencies and not probabilities }
 }
 \details{
-  Computes Shannon's and equitability indices. The vetor passed can be a probability vector whose sum equal 1 or a vector of frequencies (e.g. the number of food item of each category). In this case the argument proba must be set to FALSE.
+  Computes Shannon's and equitability indices. The vector passed can be a probability vector whose sum equal 1 or a vector of frequencies (e.g. the number of food item of each category). In this case the argument proba must be set to FALSE.
 }
 \value{
   A vector of two values: Shannon's and equitability indices
