@@ -1,6 +1,9 @@
  
 kruskalmc<-function (resp, categ, probs = 0.05, cont = NULL) 
 {
+		db<-na.omit(data.frame(resp,categ))
+		resp<-db[,1]
+		categ<-db[,2]
     lst <- split(rank(resp), categ)
     name <- names(lst)
     R <- sapply(lst, mean)

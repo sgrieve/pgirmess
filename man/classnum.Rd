@@ -24,15 +24,14 @@ classnum(x, breaks = "Sturges")
 \details{
   The default for 'breaks' is '"Sturges"': see 'nclass.Sturges'. Other names for which algorithms are supplied are '"Scott"' and
    '"FD"' for '"Friedman-Diaconis"' (with corresponding functions 'nclass.scott' and 'nclass.FD'). Case is ignored and partial matching is used.
-  Breaks and labels are stored as attributes.
-}
+  Breaks and labels are stored as attributes. }
+
 \value{
   A vector of the same length as x, with the index of the class which each value of x belongs to
 }
 
-\author{ Patrick Giraudoux, pgiraudo@univ-fcomte.fr }
 
-\seealso{ \code{\link{cut}} }
+\seealso{ \code{\link[base]{cut}}, \code{\link[classInt]{classIntervals}} }
 
 \examples{
 x<-rnorm(30)

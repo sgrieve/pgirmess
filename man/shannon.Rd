@@ -5,18 +5,18 @@
   Computes Shannon's and equitability indices
 }
 \usage{
-shannon(vect, proba=TRUE)
+shannon(vect, base=2)
 }
 
 \arguments{
   \item{vect}{ a probability vector whose sum = 1 or a frequency vector}
-  \item{proba}{ FALSE if the vector is frequencies and not probabilities }
+  \item{base}{ logarithm base used (default=2) }
 }
 \details{
-  Computes Shannon's and equitability indices. The vector passed can be a probability vector whose sum equal 1 or a vector of frequencies (e.g. the number of food item of each category). In this case the argument proba must be set to FALSE.
+  Computes Shannon's and equitability indices. The vector passed can be a probability vector whose sum equal 1 or a vector of frequencies (e.g. the number of food item of each category). 
 }
 \value{
-  A vector of two values: Shannon's and equitability indices
+  A vector of two values: Shannon's and equitability indices. The base logarithm used is stored as attribute
 }
 
 
@@ -28,8 +28,7 @@ sum(x)
 shannon(x)
 
 x<-rpois(10,6)
-shannon(x, proba=FALSE)
-
+shannon(x, base=exp(1))
 
 }
 \keyword{ misc }
