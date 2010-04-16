@@ -35,7 +35,7 @@ dirs
 
 plot(range(mydata[,c(1,3)]),range(mydata[,c(2,4)]),type="n")
 Segments(mydata)
-text(mydata[,3],mydata[,4],paste(round(dirs,0),"°"),cex=0.7)
+text(mydata[,3],mydata[,4],paste(round(dirs,0),"\u00b0"),cex=0.7)
   }
 
 \keyword{ spatial }

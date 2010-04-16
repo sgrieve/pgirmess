@@ -2,6 +2,7 @@
 kruskalmc<-function (resp, categ, probs = 0.05, cont = NULL) 
 {
 		db<-na.omit(data.frame(resp,categ))
+		if(nrow(db)!=length(resp)) warning(paste(length(resp)-nrow(db),"lines including NA have been omitted"))
 		resp<-db[,1]
 		categ<-db[,2]
     lst <- split(rank(resp), categ)
