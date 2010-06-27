@@ -1,5 +1,9 @@
+kruskalmc <- function (resp,...) {
+  UseMethod("kruskalmc") 
+}
+
  
-kruskalmc<-function (resp, categ, probs = 0.05, cont = NULL) 
+kruskalmc.default <- function (resp, categ, probs = 0.05, cont = NULL,...) 
 {
 		db<-na.omit(data.frame(resp,categ))
 		if(nrow(db)!=length(resp)) warning(paste(length(resp)-nrow(db),"lines including NA have been omitted"))
@@ -61,4 +65,10 @@ kruskalmc<-function (resp, categ, probs = 0.05, cont = NULL)
         critical.dif = lims, difference = ifelse((difv - lims) > 0, TRUE, FALSE)))
     class(output) <- c("mc", "list")
     output
+}
+
+
+kruskalmc.formula <- function(resp,data=NULL,...) {
+  mf <- model.frame(resp,data)
+  kruskalmc.default(mf[,1],mf[,2],...)
 }

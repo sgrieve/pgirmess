@@ -23,7 +23,8 @@ ks.gof(var)
   \item{data.name }{a character string giving the name(s) of the data.}
 }
 \references{ see ks.test }
-\author{ Patrick Giraudoux patrick.giraudoux@univ-fcomte.fr }
+
+
 \seealso{ \code{\link{ks.test}}}
 \examples{
 x<-rnorm(50)

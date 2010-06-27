@@ -19,8 +19,6 @@ TukeyHSDs(TukeyHSD.object)
   An object of class "multicomp" and "TukeyHSD"
 }
 
-\author{ Patrick Giraudoux <pgiraudo@univ-fcomte.fr> }
-
 \seealso{ \code{\link{TukeyHSD}} }
 \examples{
 

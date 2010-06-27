@@ -12,7 +12,6 @@ rmls()
 This function has no arguments. This brings up a modal dialog box with a (scrollable) list of objects available in the parent frame. They can be selected by the mouse and then removed.
 }
 
-\author{ Patrick Giraudoux <patrick.giraudoux@univ-fcomte.fr> }
 
 \seealso{ ls, rm }
 \examples{
