@@ -19,7 +19,6 @@ trans2seg(vect)
   A matrix of 4 columns to be passed eg to fonctions as "segments".
 }
 
-\author{ Patrick Giraudoux <pgiraudo@univ-fcomte.fr> }
 
 \seealso{ trans2pix }
 \examples{
@@ -32,4 +31,4 @@ mysegs<-trans2seg(cbind(x,y))
 segments(mysegs[,1],mysegs[,2],mysegs[,3],mysegs[,4])
 }
 
-\keyword{ utilities }% at least one, from doc/KEYWORDS
+\keyword{ utilities }

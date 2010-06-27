@@ -35,7 +35,7 @@
   This generic function is implemented in R language, thus can be quite slow. 
 }
 
-\author{ Patrick Giraudoux <patrick.giraudoux@univ-fcomte.fr>. The implementation of PermTest.lme has been helped by Renaud Lancelot }
+\note{The implementation of PermTest.lme has been helped by Renaud Lancelot}
 
 \examples{
 library(MASS)

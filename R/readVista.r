@@ -2,7 +2,7 @@ readVista<-function (i="garmin",f = "usb:", type = "w", seg=FALSE, invisible = T
 	
   if (type=="w"){
         gpsdata <- system(paste("gpsbabel -w -i ",i," -f ",f," -o gpx -F -", sep = ""), intern = TRUE, invisible = TRUE)
-				if (any(grep("Can't init", gpsdata))) stop("Cannot read GPS: check connexion and the device interface argument 'f' (eg. type, port number, etc.)")
+				if (!any(grep("<gpx", gpsdata))) stop("Cannot read GPS: check connexion and the device interface argument 'f' (eg. type, port number, etc.)")
         tmp<-tempfile(pattern="readVista")
         cat(gpsdata,file=tmp)
         concat<-readLines(tmp,warn=FALSE)
@@ -36,7 +36,7 @@ readVista<-function (i="garmin",f = "usb:", type = "w", seg=FALSE, invisible = T
 
     if (type=="t"){
         gpsdata <- system(paste("gpsbabel -t -i ",i," -f ",f," -o gpx -F -", sep = ""), intern = TRUE, invisible = TRUE)
-				if (any(grep("Can't init", gpsdata))) stop("Cannot read GPS: check connexion and the device interface argument 'f' (eg. type, port number, etc.)")
+				if (!any(grep("<gpx", gpsdata))) stop("Cannot read GPS: check connexion and the device interface argument 'f' (eg. type, port number, etc.)")
         tmp<-tempfile(pattern="readVista")
         cat(gpsdata,file=tmp)
         x<-readLines(tmp,warn=FALSE)

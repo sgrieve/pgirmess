@@ -21,8 +21,6 @@ CI(x, y, totrials = FALSE)
   A matrix of length(x) rows and 2 columns. Column 1: lower limit; column 2: upper limit of the 95 percent confidence interval
 }
 
-\author{ Patrick Giraudoux <pgiraudo@univ-fcomte.fr }
-
 \seealso{ \code{\link{prop.test}}}
 \examples{
 

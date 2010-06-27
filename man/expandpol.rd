@@ -18,8 +18,6 @@ expandpoly(mypol, fact)
   A matrix of polygon coordinates
 }
 
-\author{ Patrick Giraudoux <pgiraudo@univ-fcomte.fr> }
-
 \seealso{ \code{\link{polygon}} }
 \examples{
 

@@ -1,6 +1,5 @@
 \name{rwhatbufCat}
 \alias{rwhatbufCat}
-\alias{rwhatbuf}
 \title{Analyses the contents of a raster map of categorical values within various buffer sizes centred on points }
 \description{Analyses the contents of a raster map of categorical values within various buffer sizes centred on points }
 

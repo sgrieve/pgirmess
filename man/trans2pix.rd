@@ -19,8 +19,6 @@ trans2pix(vect)
   A matrix with the intermediate coordinates computed.
 }
 
-\author{ Patrick Giraudoux <pgiraudo@univ-fcomte.fr> }
-
 \seealso{ \code{\link{trans2seg}} }
 \examples{
 

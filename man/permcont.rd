@@ -18,7 +18,6 @@ permcont(Table)
 A matrix with the permuted values
 }
 
-\author{ Patrick Giraudoux <patrick.giraudoux@univ-fcomte.fr}
 
 \examples{
 tab<-cbind(n1=c(10,12,8,7,5),n2=c(4,5,8,10,12))
