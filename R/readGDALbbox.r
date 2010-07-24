@@ -10,7 +10,7 @@ readGDALbbox<-function(gdal,spo,...){
 	xcol<-which(myx>=mybb[1,1] & myx<=mybb[1,2])
 	ycol<-which(myy>=mybb[2,1] & myy<=mybb[2,2])
 
-  readGDAL(gdal,offset=c(min(ycol),min(xcol)),region.dim=c(length(ycol),length(xcol)),...)
-
+  x<-readGDAL(gdal,offset=c(min(ycol),min(xcol)),region.dim=c(length(ycol),length(xcol)),...)
+  return(x)
 }
 
