@@ -1,7 +1,7 @@
 \name{rwhatbufCat}
 \alias{rwhatbufCat}
-\title{Analyses the contents of a raster map of categorical values within various buffer sizes centred on points }
-\description{Analyses the contents of a raster map of categorical values within various buffer sizes centred on points }
+\title{Analyses the contents of a SpatialGridDataFrame of categorical values within various buffer sizes centred on points }
+\description{Analyses the contents of a SpatialGridDataFrame of categorical values within various buffer sizes centred on points }
 
 \usage{rwhatbufCat(rast, sites, bufsizes, att=1)}
 
@@ -18,7 +18,7 @@
 
 \value{ a dataframe, with the buffer size as first column, the site ID as second column. The other colums are the pixel frequency of each category}
 
-\seealso{ \code{\link[pgirmess]{rwhatbufNum}}, \code{\link[pgirmess]{rwhatpoly}}}
+\seealso{ \code{\link[pgirmess]{rwhatbufNum}}, \code{\link[pgirmess]{rwhatpoly}}, \code{\link[pgirmess]{rwhatbufCat2}}}
 
 \examples{
 

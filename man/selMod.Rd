@@ -57,7 +57,9 @@
  }
 \author{ Patrick Giraudoux and David Pleydell: pgiraudo@univ-fcomte.fr, dpleydel@univ-fcomte.fr }
 
-\seealso{ \code{\link{AIC}},\code{\link{logLik}} }
+\seealso{ \code{\link{AIC}},\code{\link{logLik}}, \code{\link[AICcmodavg]{aictab}} }
+
+
 \examples{
  library(MASS)
  anorex.1 <- lm(Postwt ~ Prewt*Treat, data = anorexia)
