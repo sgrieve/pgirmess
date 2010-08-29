@@ -1,6 +1,6 @@
 Package: pgirmess
-Date: 2010/07/22
-Version: 1.4.7
+Date: 2010/08/28
+Version: 1.4.8
 Title: Data analysis in ecology
 Author: Patrick Giraudoux <patrick.giraudoux@univ-fcomte.fr>
 Description: Miscellaneous functions for analysis and display of
@@ -9,6 +9,6 @@ Maintainer: Patrick Giraudoux <patrick.giraudoux@univ-fcomte.fr>
 Suggests: boot, gstat, maptools, MASS, nlme, rgdal, sp, spdep, splancs
 License: GPL (>= 2)
 URL: http://perso.orange.fr/giraudoux/
-Packaged: 2010-07-24 06:45:54 UTC; pgiraudo
+Packaged: 2010-08-28 13:25:06 UTC; pgiraudo
 Repository: CRAN
-Date/Publication: 2010-07-24 20:41:50
+Date/Publication: 2010-08-29 07:13:15

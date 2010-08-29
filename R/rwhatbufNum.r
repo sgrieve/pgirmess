@@ -18,7 +18,7 @@ rwhatbufNum<-function(rast, sites,bufsizes,att=1){
 				compteur<-compteur+1
 				if ((j == 3) & (i == bufsizes[1])) {
 				esTime<-(Sys.time()-t0)*(length(bufsizes)*nrow(sites@data)/2)
-				cat(paste("Time at start: ",t0,"\nEstimated computing duration: ", format(esTime),"\nEstimated end time: ",t0+esTime,"\n"),sep="")
+				cat(paste("Time at start: ",t0,"\nApproximate run time: ", format(esTime),"\nApproximate end time: ",t0+esTime,"\n"),sep="")
 				}
 				if (isTRUE(all.equal(compteur/100,trunc(compteur/100)))) cat(compteur,"\n")
 				flush.console()
