@@ -1,12 +1,12 @@
 \name{rwhatbufNum}
 \alias{rwhatbufNum}
-\title{Analyses the contents of a raster map of numerical values within various buffer sizes centred on points }
-\description{Analyses the contents of a raster map of numerical values within various buffer sizes centred on points }
+\title{Analyses the contents of a SpatialPixelsDataFrame or a SpatialGridDataFrame of numerical values within various buffer sizes centred on points }
+\description{Analyses the contents of a SpatialPixelsDataFrame or a SpatialGridDataFrame of numerical values within various buffer sizes centred on points }
 
 \usage{rwhatbufNum(rast, sites, bufsizes, att=1)}
 
 \arguments{
-  \item{rast}{object of class \code{\link[sp]{SpatialGridDataFrame}} to analyse}
+  \item{rast}{object of class \code{\link[sp]{SpatialPixelsDataFrame}} or \code{\link[sp]{SpatialGridDataFrame}} to analyse}
   \item{sites}{ object of class \code{\link[sp]{SpatialPointsDataFrame}} containing the points on which buffers must be centered}
   \item{bufsizes}{a vector of buffer radii, e.g. c(500, 1000, 1500)}
   \item{att}{column number of the attribute variable}
@@ -18,7 +18,7 @@
 
 \value{ a list of lists: top level, the buffer size; second level, the values of the raster map for each point site within the buffer}
 
-\seealso{ \code{\link[pgirmess]{rwhatbufCat}}, \code{\link[pgirmess]{rwhatpoly}}}
+\seealso{ \code{\link[pgirmess]{rwhatbufCat}}, \code{\link[pgirmess]{rwhatpoly}}, \code{\link[pgirmess]{rwhatbufCat2}}}
 
 \examples{
 

@@ -6,15 +6,15 @@ rwhatbufCat<-function(rast, sites,bufsizes,att=1){
 	fintab2<-NULL
 	compteur<-0
 	t0<-Sys.time()
-	cat("Number of buffers to compute: ",length(bufsizes)*nrow(sites@data),"\n")
+	cat("Number of buffers to compute: ",length(bufsizes)*nrow(coords),"\n")
 		for(i in bufsizes){
-  		fintab<-matrix(NA,ncol=length(cols),nrow=nrow(sites@data)) # constitution du tableau pour 1 diamètre de buffer
+  		fintab<-matrix(NA,ncol=length(cols),nrow=nrow(coords)) # constitution du tableau pour 1 diamètre de buffer
 			colnames(fintab)<-cols
-			rownames(fintab)<-row.names(sites@data)	
-			for (j in 1:nrow(sites@data)) {
+			rownames(fintab)<-1:nrow(coords)
+			for (j in 1:nrow(coords)) {
 			compteur<-compteur+1
 			if ((j == 3) & (i == bufsizes[1])) {
-				esTime<-(Sys.time()-t0)*(length(bufsizes)*nrow(sites@data)/2)
+				esTime<-(Sys.time()-t0)*(length(bufsizes)*nrow(coords)/2)
 				cat(paste("Time at start: ",t0,"\nApproximate run time: ", format(esTime),"\nApproximate end time: ",t0+esTime,"\n"),sep="")
 			}
 			if (isTRUE(all.equal(compteur/100,trunc(compteur/100)))) cat(compteur,"\n")
