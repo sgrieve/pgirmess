@@ -1,15 +1,15 @@
 \name{rwhatpoly}
 \alias{rwhatpoly}
-\title{Analyses the contents of a raster map within polygons }
-\description{Analyses the contents of a raster map within polygons }
+\title{Analyses the contents of a SpatialPixelsDataFrame or a SpatialGridDataFrame within polygons }
+\description{Analyses the contents of a SpatialPixelsDataFrame or a SpatialGridDataFrame within polygons }
 
 \usage{rwhatpoly(sgdf, SP, att=1, NAin=TRUE)}
 
 \arguments{
-  \item{sgdf}{object of class \code{\link[sp]{SpatialGridDataFrame}} to analyse}
+  \item{sgdf}{object of class \code{\link[sp]{SpatialPixelsDataFrame}} or \code{\link[sp]{SpatialGridDataFrame}} to analyse}
   \item{SP}{ object of class \code{\link[sp]{SpatialPolygons}}}
   \item{att}{column number of the attribute variable}
-  \item{NAin}{should NA values within polygons be counted (default yes = TRUE}
+  \item{NAin}{should NA values within polygons be counted (default to yes = TRUE)}
 }
 
 \details{
