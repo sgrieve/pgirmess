@@ -1,6 +1,6 @@
 pave<-function(cordseg,yc,xc,fix.edge=NULL,ydown=TRUE,output="list"){
 if (is.data.frame(cordseg)) cordseg<-as.matrix(cordseg)
-cordseg<-matrix(cordseg,nc=2)
+cordseg<-matrix(cordseg,ncol=2)
 d<-dim(cordseg)
 if(d[2]!=2 | d[1]!=2) stop("Segment coordinates must be a 2 x 2 matrix")
 cordseg<-cordseg[order(cordseg[,1]),]
@@ -50,7 +50,7 @@ if(!is.null(fix.edge)) {
     for (j in 1:xc){
         for (i in 1:yc){
             k<-k+1
-            poList[[k]]<-matrix(c(xmat[i,j],ymat[i,j],xmat[i,j+1],ymat[i,j+1],xmat[i+1,j+1],ymat[i+1,j+1],xmat[i+1,j],ymat[i+1,j],xmat[i,j],ymat[i,j]),nc=2,byrow=TRUE)
+            poList[[k]]<-matrix(c(xmat[i,j],ymat[i,j],xmat[i,j+1],ymat[i,j+1],xmat[i+1,j+1],ymat[i+1,j+1],xmat[i+1,j],ymat[i+1,j],xmat[i,j],ymat[i,j]),ncol=2,byrow=TRUE)
         }
     }
 

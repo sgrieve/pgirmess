@@ -2,7 +2,7 @@ diag2edge<-function(cordseg){
 
 if (is.data.frame(cordseg)) 
     cordseg <- as.matrix(cordseg)
-    cordseg <- matrix(cordseg, nc = 2)
+    cordseg <- matrix(cordseg, ncol = 2)
     d <- dim(cordseg)
     if (d[2] != 2 | d[1] != 2) 
         stop("Segment coordinates must be a 2 x 2 matrix")
