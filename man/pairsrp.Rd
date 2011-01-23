@@ -22,8 +22,6 @@ pairsrp(dataframe, meth = "spearman", pansmo = FALSE, abv = FALSE, lwt.cex = NUL
   This function is a wrapper for pairs() and cor()
 }
 
-\author{ Patrick Giraudoux <patrick.giraudoux@univ-fcomte.fr>}
-
 
 \seealso{ \code{\link{pairs}} }
 \examples{

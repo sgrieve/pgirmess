@@ -13,10 +13,10 @@
 }
 
 \details{
- This function generates a data.frame with the frequency of each category of a raster map within various radius buffers centered on point sites. This is exactly the same code as rwhatbuf, now deprecated, of the earlier version of pgirbric.
+ This function generates a data.frame with the frequency of each category of a raster map within various radius buffers centered on point sites.
 }
 
-\value{ a dataframe, with the buffer size as first column, the site ID as second column. The other colums are the pixel frequency of each category}
+\value{ A dataframe, with the buffer size as first column, the site ID as second column. The other colums are the pixel frequency of each category}
 
 \seealso{ \code{\link[pgirmess]{rwhatbufNum}}, \code{\link[pgirmess]{rwhatpoly}}, \code{\link[pgirmess]{rwhatbufCat2}}}
 

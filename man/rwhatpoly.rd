@@ -3,22 +3,31 @@
 \title{Analyses the contents of a SpatialPixelsDataFrame or a SpatialGridDataFrame within polygons }
 \description{Analyses the contents of a SpatialPixelsDataFrame or a SpatialGridDataFrame within polygons }
 
-\usage{rwhatpoly(sgdf, SP, att=1, NAin=TRUE)}
+\usage{rwhatpoly(sgdf, SP, att=1, NAin=TRUE, num=FALSE)}
 
 \arguments{
   \item{sgdf}{object of class \code{\link[sp]{SpatialPixelsDataFrame}} or \code{\link[sp]{SpatialGridDataFrame}} to analyse}
   \item{SP}{ object of class \code{\link[sp]{SpatialPolygons}}}
   \item{att}{column number of the attribute variable}
   \item{NAin}{should NA values within polygons be counted (default to yes = TRUE)}
+  \item{num}{TRUE if pixel values are numeric}
 }
 
 \details{
- This function generates a table with the frequency of each category of the raster (\code{\link[sp]{SpatialGridDataFrame}}) within each polygon of the \code{\link[sp]{SpatialPolygons}} object.
+If num is FALSE (the default) generates a table with the frequency of each category of the raster (\code{\link[sp]{SpatialGridDataFrame}}) within each polygon of the \code{\link[sp]{SpatialPolygons}} object.
+
+If num is TRUE, it generates a list in which items are the values of the pixels included in each polygon
 }
 
-\value{A table. Each row is a polygon count (row name = polygon ID number), the last one the count of all values out of any polygons; each column is a raster category}
+\value{
 
-\seealso{ \code{\link[pgirmess]{rwhatbufCat}}, \code{\link[pgirmess]{rwhatbufNum}}}
+If num if FALSE, a table. Each row is a polygon count (row name = polygon ID number), the last one the count of all values out of any polygons; each column is a raster category
+
+If num is TRUE, a list. Each item is a vector of the pixel values included in the corresponding polygon
+
+}
+
+\seealso{ \code{\link[pgirmess]{rwhatbufCat}}, \code{\link[pgirmess]{rwhatbufNum}}, \code{\link[sp]{overlay}}}
 
 \examples{
 
@@ -50,6 +59,15 @@ text(coordinates(SP),sapply(SP@polygons,function(x) x@ID))
 # extraction
 rwhatpoly(meuse.grid,SP,att=4) # get the number of pixels of each soil category (column) in each polygon (rows)
 rwhatpoly(meuse.grid,SP,att=4,NAin=FALSE)  # get the number of pixels of each soil category (column), NAs excluded, in each polygon (rows)
+
+image(meuse.grid,att=3) # distance map
+plot(SP,add=TRUE)
+text(coordinates(SP),sapply(SP@polygons,function(x) x@ID))
+
+vals<-rwhatpoly(meuse.grid,SP,att=3,num=TRUE)  # get the number of pixels of each soil category (column), NAs excluded, in each polygon (rows), the output is a list (lapply or sapply can be used to get statistics)
+names(vals)<-c("P1","P2","P3",NA) # NA for pixels that are ouside of any polygon
+vals[[1]]
+sapply(vals,mean,na.rm=TRUE)
 
 }
 

@@ -27,6 +27,7 @@ A data frame of four columns:
     \item{long}{longitude}
     \item{lat}{latitude}
     \item{altitude}{elevation}
+    
 Information about the data type (waypoints or tracks) and the date of download are stored as attributes.
 }
 \references{\url{http://www.gpsbabel.org}}
