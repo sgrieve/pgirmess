@@ -12,13 +12,13 @@ readVista(i = "garmin", f = "usb:", type="w", seg=FALSE, invisible=TRUE)
 
 \arguments{
   \item{i}{INTYPE: a supported file type, default "garmin"}
-  \item{f}{INFILE: the appropriate device interface, default "usb:", on Windows for serial interfaces commonly "com4:" or similar}
+  \item{f}{INFILE: the appropriate device interface, default "usb:"}
   \item{type}{"w" waypoints, or "t" track, or others provided in gpsbabel}
   \item{seg}{track ID type: FALSE for numbers, TRUE for GPS track IDs}
   \item{invisible}{Under Windows, do not open an extra window}
 }
 \details{
- The function calls gpsbabel via the system. The gpsbabel program must be present and on the user's PATH for the function to work see \url{http://www.gpsbabel.org}. The function has been tested on the following Garmin GPS devices: Etrex Summit, Etrex Vista Cx and GPSmap 60CSx.
+ The function calls gpsbabel via the system. The gpsbabel program must be present and on the user's PATH for the function to work see \url{http://www.gpsbabel.org}. The function has been tested on the following Garmin GPS devices: Etrex Summit, Etrex Vista Cx and GPSmap 60CSx. On Ubuntu Linux, USB-to-RS232 converter cables were connected succesfully with "/dev/ttyUSB0"; on Windows commonly "com4:" or similar.
 }
 
 \value{
