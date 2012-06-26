@@ -1,5 +1,4 @@
 readGDALbbox<-function(gdal,spo,mar=2,...){
-	require(rgdal)
 	mybb<-bbox(spo)
 	x<-GDALinfo(gdal)
 	

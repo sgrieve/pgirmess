@@ -1,6 +1,5 @@
 
 thintrack<-function(spdf,mindist=100){
-  require(sp)
   st<-FALSE
   cds<-coordinates(spdf)
   i<-1

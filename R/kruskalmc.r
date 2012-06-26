@@ -45,7 +45,7 @@ kruskalmc.default <- function (resp, categ, probs = 0.05, cont = NULL,...)
         choice <- pmatch(cont, c("one-tailed", "two-tailed"), 
             nomatch = 3)
         if (choice == 1) {
-            z <- qnorm(probs/2 * (length(lst) - 1), lower.tail = FALSE)
+            z <- qnorm(probs/(2 * (length(lst) - 1)), lower.tail = FALSE)
             lims <- z * sqrt(N * (N + 1)/12 * (1/n[indices[1:length(vname), 
                 1]] + 1/n[indices[1:length(vname), 2]]))
             names(lims) <- vname

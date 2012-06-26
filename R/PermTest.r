@@ -40,7 +40,7 @@ PermTest.lm<-function(obj,B=1000,...){
 # value: a data.frame of the p.values of each independent variable F
 # values: a list including a data.frame of the p.values of each independent variable F
 # and the call
-  require(nlme)
+
   an <- anova(obj, type = "marginal")
   Fobs <- an[[3]]
   n <- rep(0, length(an[[3]]))

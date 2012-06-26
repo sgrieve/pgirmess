@@ -1,5 +1,4 @@
 rwhatpoly<-function(sgdf,SP,att=1, NAin=TRUE, num=FALSE){
-	require(sp)
 	if (NAin) fullgrid(sgdf)<-TRUE
 	polyID<-overlay(sgdf,SP)
 	
