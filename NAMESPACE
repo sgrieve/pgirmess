@@ -1,0 +1,22 @@
+importFrom(splancs, inout)
+
+export(CI,PermTest,Segments,TukeyHSDs,classnum,cormat,correlog,date2winter,diag2edge,difshannonbio,dirProj,dirSeg,distNNeigh,distNode,distSeg,distTot,expandpoly,friedmanmc,gps2gpx,kruskalmc,ks.gof,pairsrp,pave,pclig,permcont,piankabio,piankabioboot,polycirc,polycirc2,postxt,print.mc,readGDALbbox,readVista,rmls,rwhatbufCat,rwhatbufCat2,rwhatbufNum,rwhatpoly,selMod,shannon,shannonbio,shannonbioboot,tabcont2categ,thintrack,trans2pix,trans2seg,uploadGPS,val4symb,valchisq,write.delim,writeGPX,writePRJ) 
+
+
+S3method(print, PermTest)
+S3method(PermTest, lm)
+S3method(PermTest, glm)
+S3method(PermTest, lme)
+S3method(kruskalmc, default)
+S3method(kruskalmc, formula)
+S3method(selMod, lm)
+S3method(selMod, list)
+S3method(plot, correlog)
+S3method(print, correlog)
+S3method(print, mc)
+
+
+
+
+
+

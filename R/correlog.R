@@ -1,7 +1,5 @@
 "correlog" <-
 function(coords,z,method="Moran",nbclass=NULL,...){
-
-    x<-require(spdep);if (!x) stop("Package spdep required")
     coords<-as.matrix(coords)
     matdist<-dist(coords)
     if (is.null(nbclass)) nbclass<-nclass.Sturges(matdist)

@@ -55,7 +55,6 @@ if(!is.null(fix.edge)) {
     }
 
     if (output=="spdf") {
-        x<-require(sp);if (!x) stop("Package 'sp' required")
         p2<-rep(list(NA),length(poList))
         for (i in 1:length(poList)){
             p1<-Polygon(poList[[i]])

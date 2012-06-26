@@ -1,6 +1,4 @@
 rwhatbufNum<-function(rast, sites,bufsizes,att=1){
-	require(splancs)
-	require(pgirmess)
 	coords<-coordinates(sites)
 	mylist<-rep(list(NA),length(bufsizes))
 	names(mylist)<-bufsizes

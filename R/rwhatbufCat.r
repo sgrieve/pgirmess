@@ -1,6 +1,4 @@
 rwhatbufCat<-function(rast, sites,bufsizes,att=1){
-	require(splancs)
-	require(pgirmess)
 	cols<-levels(factor(rast@data[,att],exclude=NULL)) # liste des catégories
 	coords<-coordinates(sites)
 	fintab2<-NULL

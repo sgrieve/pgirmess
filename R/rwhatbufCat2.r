@@ -1,7 +1,4 @@
 rwhatbufCat2<-function(rast, sites,bufsizes,att=1,asList=FALSE){
-	require(splancs)
-	require(pgirmess)
-	require(rgdal)
 	coords<-coordinates(sites)
 	res.list<-rep(list(NA),length(bufsizes))
 	names(res.list)<-bufsizes
