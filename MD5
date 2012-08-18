@@ -1,4 +1,4 @@
-45089be3c0a788e52b3989c832a3e197 *DESCRIPTION
+91346cfb8ce8cdd7baf6862635624e80 *DESCRIPTION
 e7e46c7ae8f457fa309a69150344a2c6 *NAMESPACE
 f5559646734b73482f73efbc14a646af *R/CI.r
 c15518af2dcffa7e85bdfbb5dc9f545a *R/PermTest.r
@@ -19,7 +19,7 @@ d2cb30ab0ff7e00cf3edeacd303f64c6 *R/distNode.r
 91d705eff3ec45995b3d845fba8bb73a *R/expandpoly.r
 203a9c8d8cc539807e3b36b27d49d471 *R/friedmanmc.r
 b065e23e24e428de231768ebfce970a4 *R/gps2gpx.r
-594eb2d30a41b2a4adb6e6fc72e9e4df *R/kruskalmc.r
+f7e8ee26cf384e3b68953f02752d05f5 *R/kruskalmc.r
 1480837a6bdbaa936a67d77538321841 *R/ks.gof.r
 b92383a945e873da4d2421cfe5b0c9c3 *R/pairsrp.r
 e4da4e324baee795bd1adcba22a998c5 *R/pave.r
@@ -73,7 +73,7 @@ a536d26d5773f820d314702f722ff2e7 *man/distNNeigh.rd
 106e2e0748bfa83de63dee9ba127ff33 *man/expandpol.rd
 e34b2f86409fb418d49a6c1de18cd177 *man/friedmanmc.rd
 ecdd3e64e473acc7a911aeefeb001bbb *man/gps2gpx.rd
-03d0d83ad56cf8c9d23d9b0a58dd76e9 *man/kruskalmc.rd
+c0c023024023c09559fa4dcac3bedd58 *man/kruskalmc.rd
 48d0679d82c78e9706fecf09f25a097a *man/ks.gof.rd
 3894f4c1003036be9f3d96c15ac419fa *man/pairsrp.Rd
 3cf1fecfa39186a52a99628e9f4739f5 *man/pave.Rd

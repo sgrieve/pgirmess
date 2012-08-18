@@ -61,7 +61,7 @@ kruskalmc.default <- function (resp, categ, probs = 0.05, cont = NULL,...)
         if (choice == 3) 
             stop("Values must be 'one-tailed' or 'two-tailed', partial matching accepted")
     }
-    output <- list(statistic = stat, p.value = probs, dif.com = data.frame(obs.dif = difv, 
+    output <- list(statistic = stat, signif.level = probs, dif.com = data.frame(obs.dif = difv, 
         critical.dif = lims, difference = ifelse((difv - lims) > 0, TRUE, FALSE)))
     class(output) <- c("mc", "list")
     output
