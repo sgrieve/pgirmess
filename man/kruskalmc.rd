@@ -16,7 +16,7 @@ kruskalmc(resp,...)
 \arguments{
   \item{resp}{ a numeric vector of data values or a formula of the type 'response~category'. }
   \item{categ}{ a factor object giving the group for the corresponding elements of 'x' }
-  \item{probs}{ a probability for the critical difference }
+  \item{probs}{ the significance level}
   \item{cont}{ NULL (default) for multiple comparison between treatments; 'one-tailed' or 'two-tailed'  for corresponding multiple comparisons treatments versus control; partial matching allowed}
   \item{data}{ a data.frame including the variables used in the formula }  
   \item{...}{ other parameters to be passed as arguments (not used here) }
@@ -25,7 +25,7 @@ kruskalmc(resp,...)
 
 \details{
 
-  When the obtained value of a Kruskal-Wallis test is significant, it indicates that at least one of the groups is different from at least one of the others. This test helps determining which groups are different with pairwise comparisons adjusted appropriately. Those pairs of groups which have observed differences higher than a critical value are considered statistically different at the given probability (p level). Three type of multiple comparisons are implemented: comparisons between treatments, 'one-tailed' and 'two-tailed' comparison treatments versus control.  The first factor level is considered the control. NAs are omitted from data before processing.
+  When the obtained value of a Kruskal-Wallis test is significant, it indicates that at least one of the groups is different from at least one of the others. This test helps determining which groups are different with pairwise comparisons adjusted appropriately. Those pairs of groups which have observed differences higher than a critical value are considered statistically different at a given significance level. Three type of multiple comparisons are implemented: comparisons between treatments, 'one-tailed' and 'two-tailed' comparison treatments versus control.  The first factor level is considered the control. NAs are omitted from data before processing.
 	
 	For further details please consider the refence below where the method is fully described. One may also want to visit \url{http://pagesperso-orange.fr/giraudoux/#pgirmess}
 }
@@ -33,7 +33,7 @@ kruskalmc(resp,...)
 \value{
   A list of class 'mc' with the following items:
   \item{statistic }{statistics used}
-  \item{p.value}{the p value of the critical difference}
+  \item{signif.level}{the significance level}
   \item{dif.com}{a data.frame with observed and critical differences}
 }
 
