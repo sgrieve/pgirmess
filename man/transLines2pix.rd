@@ -1,9 +1,9 @@
 \name{transLines2pix}
 \alias{transLines2pix}
 
-\title{ Convert a SpatialLines or a SpatialLinesDataFrame object into a list of line points at regular distance  }
+\title{ Convert a SpatialLines or a SpatialLinesDataFrame object into SptaialPointsDataFrame with points at regular distance along the lines }
 \description{
-  Convert a SpatialLines or a SpatialLinesDataFrame object into a list of line points at regular distance. This can be used e.g to discretize line transects into a regular line of points.
+  Convert a SpatialLines or a SpatialLinesDataFrame object into SptaialPointsDataFrame with points at regular distance along the lines
 }
 \usage{
 transLines2pix(spldf,mindist=100)
@@ -14,13 +14,13 @@ transLines2pix(spldf,mindist=100)
   \item{mindist}{the distance between two points (default to 100)  }
 }
 \details{
-  This function can be used e.g to discretize line transects into a regular line of points.
+  This function can be used e.g to discretize any track line (roads, paths, transects, etc.) into series of regular points. Each point may be though of as corresponding to the centre of one interval
 }
 \value{
-  A list of geographical coordinates. Each element corresponds to one  \code{\link[sp]{Line}} of the  \code{\link[sp]{SpatialLines}}.
+  A \code{\link[sp]{SpatialPointsDataFrame}}
 }
 
-\seealso{ \code{\link{trans2pix}}, \code{\link{thintrack}}}
+\seealso{ \code{\link{trans2pix}}, \code{\link{thintrack}},  \code{\link{mergeTrackObs}}}
 
 \examples{
 
@@ -37,7 +37,7 @@ transLines2pix(spldf,mindist=100)
      plot(Sl, col = c("red", "blue"))
      
      trpt<-transLines2pix(Sl,mindist=0.1)
-     for(i in 1:length(trpt)) points(trpt[[i]])
+     plot(trpt,add=TRUE)
 }
 
 \keyword{ utilities, spatial }

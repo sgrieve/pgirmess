@@ -2,13 +2,21 @@
 thintrack<-function(spdf,mindist=100){
   st<-FALSE
   cds<-coordinates(spdf)
-  i<-1
-  j<-1
-  idx<-1
-  while(!st){
-    delta<-sqrt((cds[i,1]-cds[i+j,1])^2+(cds[i,2]-cds[i+j,2])^2)
-    if(delta>=mindist) {idx<-c(idx,i+j); i<-i+j;j<-1} else j<-j+1
-    if (i+j > nrow(cds)) st<-TRUE
+  nbb<-1
+  cds2<-NULL
+   while(!st){
+    cds2<-rbind(cds2,cds[nbb,])
+    mycirc<-polycirc(mindist,unlist(cds[nbb,]))
+    idx<-inout(cds,mycirc)    
+    cds<-cds[!idx,,drop=FALSE]
+    if (nrow(cds)>1) {
+        nnb<-knearneigh(rbind(cds2[nrow(cds2),],cds),k=1)
+        nbb<-nnb$nn[1,1]-1
+    } else st<-TRUE
   }
-  return(spdf[idx,])
+  cds2<-data.frame(cds2)
+  names(cds2)<-c("x","y")
+  coordinates(cds2)<-~x+y
+  proj4string(cds2)<-proj4string(spdf)
+  cds2
 }

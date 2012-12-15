@@ -77,9 +77,7 @@ PermTest.lm<-function(obj,B=1000,...){
     an<-anova(obj)
     Fobs<-an$Deviance
     n<-rep(0,length(an$Deviance)-1)
-    attach(obj$data)
     resp<-eval(terms(formula(obj))[[2]])
-    detach(obj$data)
     
     for (i in 1:B){
         if (is.matrix(resp)) glm1<-update(obj,permcont(.)~.)

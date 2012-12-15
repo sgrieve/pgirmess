@@ -7,14 +7,14 @@
 }
 \usage{data(preybiom)}
 \format{
-  A data frame with 2196 observations on the following 6 variables.
+  A data frame with 2196 observations on the following variables.
   \describe{
-    \item{faeces:}{a factor for faeces corresponding to faeces identification numbers}
-    \item{site:}{a factor for study sites with levels \code{S} Sebaou \code{Y} Yacouren }
-    \item{saison:}{a factor for seasons with levels \code{H} \code{HD} \code{HP} \code{S} \code{SD} \code{SP}}
-    \item{sp:}{a factor for species with levels \code{C} Jackal \code{G} Genet }
-    \item{category:}{a factor for dietary items with levels \code{dech} \code{ind} \code{ins} \code{mam} \code{mol} \code{oisauv} \code{oisdom} \code{rept} \code{vege} \code{vegn}}
-    \item{biomasse:}{a numeric vector for the weight of each dietary item}
+    \item{\code{faeces}}{a factor for faeces corresponding to faeces identification numbers}
+    \item{\code{site}}{a factor for study sites with levels \code{S} Sebaou \code{Y} Yacouren }
+    \item{\code{saison}}{a factor for seasons with levels \code{H} \code{HD} \code{HP} \code{S} \code{SD} \code{SP}}
+    \item{\code{sp}}{a factor for species with levels \code{C} Jackal \code{G} Genet }
+    \item{\code{category}}{a factor for dietary items with levels \code{dech} \code{ind} \code{ins} \code{mam} \code{mol} \code{oisauv} \code{oisdom} \code{rept} \code{vege} \code{vegn}}
+    \item{\code{biomasse}}{a numeric vector for the weight of each dietary item}
   }
 }
 

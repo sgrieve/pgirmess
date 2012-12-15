@@ -2,8 +2,9 @@
 \alias{thintrack}
 
 \title{ Thin a track just keeping the points separated by a user defined minimal distance }
+
 \description{
-  Thin a track stored as a \code{\link[sp]{SpatialPointsDataFrame}} object, just keeping the points separated by a user defined minimal distance
+  Thin a track stored as a \code{\link[sp]{SpatialPointsDataFrame}} object, just keeping the points separated by a user defined minimal distance.
 }
 \usage{
 thintrack(spdf,mindist=100)
@@ -15,12 +16,15 @@ thintrack(spdf,mindist=100)
 
 }
 \details{
-Tracks downloaded from GPS often provide an unecessary large density of points at irregular distances. This function starts reading from the first point of the track and remove all points within a user specified  minimal distance (USMD), then reads the next point located at a distance equal or larger than the USMD and removes all points within the USMD, and so on...
+Tracks downloaded from GPS often provide an unecessary large density of points at irregular distances. This function starts reading from the first point of the track and removes all points within a user specified radius (USR), then reads the closest point and removes all points within the USR, and so on... 
+
   }
+  
 \value{
-  a \code{\link[sp]{SpatialPointsDataFrame}} with the track thinned.
+  A \code{\link[sp]{SpatialPoints}} object of the track thinned.
 }
 
+\seealso{ \code{\link{mergeTrackObs}} }
 
 \examples{
 
@@ -50,5 +54,7 @@ plot(mySPDF,pch=19,cex=0.5)
 plot(thintrack(mySPDF,min=200),pch=19,cex=0.7,col="red",add=TRUE)
 
 }
+
+
 
 \keyword{ spatial }
