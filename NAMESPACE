@@ -1,6 +1,6 @@
 importFrom(splancs, inout)
 
-export(CI,PermTest,Segments,TukeyHSDs,classnum,cormat,correlog,date2winter,diag2edge,difshannonbio,dirProj,dirSeg,distNNeigh,distNode,distSeg,distTot,expandpoly,friedmanmc,gps2gpx,kruskalmc,ks.gof,pairsrp,pave,pclig,permcont,piankabio,piankabioboot,polycirc,polycirc2,postxt,print.mc,readGDALbbox,readVista,rmls,rwhatbufCat,rwhatbufCat2,rwhatbufNum,rwhatpoly,selMod,shannon,shannonbio,shannonbioboot,tabcont2categ,thintrack,trans2pix,trans2seg, transLines2pix,uploadGPS,val4symb,valchisq,write.delim,writeGPX,writePRJ) 
+export(CI,PermTest,Segments,TukeyHSDs,classnum,cormat,correlog,date2winter,diag2edge,difshannonbio,dirProj,dirSeg,distNNeigh,distNode,distSeg,distTot,expandpoly,friedmanmc,gps2gpx,kruskalmc,ks.gof,mergeTrackObs,pairsrp,pave,pclig,permcont,piankabio,piankabioboot,polycirc,polycirc2,postxt,print.mc,readGDALbbox,readVista,rmls,rwhatbufCat,rwhatbufCat2,rwhatbufNum,rwhatpoly,selMod,shannon,shannonbio,shannonbioboot,tabcont2categ,thintrack,trans2pix,trans2seg, transLines2pix,uploadGPS,val4symb,valchisq,write.delim,writeGPX,writePRJ) 
 
 
 S3method(print, PermTest)

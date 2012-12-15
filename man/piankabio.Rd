@@ -18,8 +18,13 @@ piankabio(dataframe1, dataframe2)
 \value{
   Return the Pianka's index
 }
-\references{ to do }
-\author{ Patrick Giraudoux <pgiraudo@univ-fcomte.fr> }
+
+\references{
+Pianka R.D. 1973 The scructure of lizard communities. Annual Review of Ecology and Systematics, 4: 53-74.
+
+Amroun M., Giraudoux P., Delattre P. 2006 Comparative study of the diets of two sympatric carnivores - the Jackal (Canis aureus) and the Genet (Genetta genetta) - at two sites in Kabylia, Algeria. Mammalia, 70 (3): 247-254
+}
+
 
 \seealso{ \code{\link{piankabioboot}} }
 \examples{
