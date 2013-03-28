@@ -28,7 +28,7 @@ kruskalmc.default <- function (resp, categ, probs = 0.05, cont = NULL,...)
         }
         names(difv) <- vname
         z <- qnorm(probs/(length(lst) * (length(lst) - 1)), lower.tail = FALSE)
-        lims <- z * sqrt(N * (N + 1)/12 * (1/n[indices[1:length(vname),1]] + 1/n[indices[1:length(vname), 2]]))
+        lims <- z * sqrt((N * (N + 1)/12) * (1/n[indices[1:length(vname),1]] + 1/n[indices[1:length(vname), 2]]))
         names(lims) <- vname
         stat <- "Multiple comparison test after Kruskal-Wallis"
     }
@@ -42,21 +42,20 @@ kruskalmc.default <- function (resp, categ, probs = 0.05, cont = NULL,...)
         dif <- dif[1, 2:length(dif[1, ])]
         names(dif) <- vname
         difv<-dif
-        choice <- pmatch(cont, c("one-tailed", "two-tailed"), 
-            nomatch = 3)
+        choice <- pmatch(cont, c("two-tailed","one-tailed"), nomatch = 3)
         if (choice == 1) {
             z <- qnorm(probs/(2 * (length(lst) - 1)), lower.tail = FALSE)
-            lims <- z * sqrt(N * (N + 1)/12 * (1/n[indices[1:length(vname), 
+            lims <- z * sqrt((N * (N + 1))/12 * (1/n[indices[1:length(vname), 
                 1]] + 1/n[indices[1:length(vname), 2]]))
             names(lims) <- vname
-            stat <- "Multiple comparison test after Kruskal-Wallis, treatments vs control (one-tailed)"
+            stat <- "Multiple comparison test after Kruskal-Wallis, treatments vs control (two-tailed)"
         }
         if (choice == 2) {
             z <- qnorm(probs/(length(lst) - 1), lower.tail = FALSE)
-            lims <- z * sqrt(N * (N + 1)/12 * (1/n[indices[1:length(vname), 
+            lims <- z * sqrt((N * (N + 1)/12) * (1/n[indices[1:length(vname), 
                 1]] + 1/n[indices[1:length(vname), 2]]))
             names(lims) <- vname
-            stat <- "Multiple comparison test after Kruskal-Wallis, treatment vs control (two-tailed)"
+            stat <- "Multiple comparison test after Kruskal-Wallis, treatment vs control (one-tailed)"
         }
         if (choice == 3) 
             stop("Values must be 'one-tailed' or 'two-tailed', partial matching accepted")

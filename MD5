@@ -1,4 +1,4 @@
-7de2287888143060eff6e112e8494413 *DESCRIPTION
+119d13b5ba8c0540b4c43e9a199689a2 *DESCRIPTION
 c368b8d0b6dc834404745c2ef77e52d6 *NAMESPACE
 f5559646734b73482f73efbc14a646af *R/CI.r
 a8181a66584bc3024b6134a64b628b02 *R/PermTest.r
@@ -19,7 +19,7 @@ d2cb30ab0ff7e00cf3edeacd303f64c6 *R/distNode.r
 91d705eff3ec45995b3d845fba8bb73a *R/expandpoly.r
 203a9c8d8cc539807e3b36b27d49d471 *R/friedmanmc.r
 b065e23e24e428de231768ebfce970a4 *R/gps2gpx.r
-f7e8ee26cf384e3b68953f02752d05f5 *R/kruskalmc.r
+ebfd53526d26ca59ddfec59c14e65bf0 *R/kruskalmc.r
 1480837a6bdbaa936a67d77538321841 *R/ks.gof.r
 db5ffa31bd2c50fa1fbe1b2c45534e46 *R/mergeTrackObs.r
 b92383a945e873da4d2421cfe5b0c9c3 *R/pairsrp.r
@@ -57,7 +57,7 @@ a91113541a08a330b20bf17b083c8033 *R/write.delim.r
 82f0e08f7fdfa66f56e108d7a5e9b8c1 *data/preybiom.rda
 3a14449711e24d55b74e12a7156c209f *data/siegelp179.rda
 c0b9aaef668affbe26080e964f44b4e3 *man/CI.rd
-40bc0b62f4bc4c023ad584325540b406 *man/PermTest.rd
+117aa991984168fa6a9459581a3d8527 *man/PermTest.rd
 fe0f11ff7ef6e2a959337ba022b93244 *man/Segments.rd
 0a35b7e11fa3ddd9084f75ee39067ed9 *man/TukeyHSDs.rd
 cffa91754a92c69833369ea0358deaee *man/classnum.Rd
