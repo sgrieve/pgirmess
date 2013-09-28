@@ -29,6 +29,7 @@ mergeTrackObs(sppdfInt,sppdfObs)
 \examples{
 
     # track
+    library(sp)
      l2 = cbind(c(1,2,3),c(1,1.5,1))
      Sl2 = Line(l2)
      S2 = Lines(list(Sl2), ID="b")

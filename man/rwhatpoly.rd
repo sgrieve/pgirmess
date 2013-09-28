@@ -49,7 +49,10 @@ list(structure(c(180016, 180225, 180533, 180615, 180588, 180452,
 2L)), structure(c(179499, 179971, 180343, 180161, 179753, 179418, 
 179499, 330577, 330768, 330468, 330096, 330078, 330369, 330577
 ), .Dim = c(7L, 2L)))
-SP<-SpatialPolygons(list(Polygons(list(Polygon(polylist[[1]])),ID="P1"),Polygons(list(Polygon(polylist[[2]])),ID="P2"),Polygons(list(Polygon(polylist[[3]])),ID="P3")),pO=as.integer(c(1,2,3)))
+
+SP<-SpatialPolygons(list(Polygons(list(Polygon(polylist[[1]])),ID="P1"),
+Polygons(list(Polygon(polylist[[2]])),ID="P2"),Polygons(list(Polygon(polylist[[3]])),
+ID="P3")),pO=as.integer(c(1,2,3)))
 
 # raster and polygons display
 image(meuse.grid,att=4,col=c("red","green","blue")) # soil map
@@ -57,14 +60,18 @@ plot(SP,add=TRUE)
 text(coordinates(SP),sapply(SP@polygons,function(x) x@ID))
 
 # extraction
-rwhatpoly(meuse.grid,SP,att=4) # get the number of pixels of each soil category (column) in each polygon (rows)
-rwhatpoly(meuse.grid,SP,att=4,NAin=FALSE)  # get the number of pixels of each soil category (column), NAs excluded, in each polygon (rows)
+# get the number of pixels of each soil category (column) in each polygon (rows)
+rwhatpoly(meuse.grid,SP,att=4)
+# get the number of pixels of each soil category (column), NAs excluded, in each polygon (rows)
+rwhatpoly(meuse.grid,SP,att=4,NAin=FALSE)
 
 image(meuse.grid,att=3) # distance map
 plot(SP,add=TRUE)
 text(coordinates(SP),sapply(SP@polygons,function(x) x@ID))
 
-vals<-rwhatpoly(meuse.grid,SP,att=3,num=TRUE)  # get the number of pixels of each soil category (column), NAs excluded, in each polygon (rows), the output is a list (lapply or sapply can be used to get statistics)
+# get the number of pixels of each soil category (column), NAs excluded, 
+# in each polygon (rows), the output is a list (lapply or sapply can be used to get statistics)
+vals<-rwhatpoly(meuse.grid,SP,att=3,num=TRUE)  
 names(vals)<-c("P1","P2","P3",NA) # NA for pixels that are ouside of any polygon
 vals[[1]]
 sapply(vals,mean,na.rm=TRUE)
