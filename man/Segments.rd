@@ -20,7 +20,8 @@ Segments(mydata, ...)
 \seealso{ \code{\link{segments}} }
 \examples{
  mydata<-cbind(rnorm(20),rnorm(20),rnorm(20),rnorm(20))
- plot(range(rbind(mydata[,1],mydata[,3])),range(rbind(mydata[,2],mydata[,4])),type="n",xlab="",ylab="")
+ plot(range(rbind(mydata[,1],mydata[,3])),range(rbind(mydata[,2],mydata[,4])),
+ type="n",xlab="",ylab="")
  Segments(mydata,col=rainbow(20))
  
  myvec<-rnorm(4)

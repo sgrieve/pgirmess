@@ -34,7 +34,9 @@ writeGPX(x, filename = "",type="w")
 
 \examples{
 
-coords<-data.frame(ID=c("C18J01", "C18J02"),Long= c(-46.996602, 47.002745),Lat=c(-6.148734, 6.14829),Alt=c(250,1230))
+coords<-data.frame(ID=c("C18J01", "C18J02"),Long= c(-46.996602, 47.002745),
+Lat=c(-6.148734, 6.14829),Alt=c(250,1230))
+
 writeGPX(coords) # waypoints
 writeGPX(coords,type="t") # track
 

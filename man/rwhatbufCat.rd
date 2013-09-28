@@ -34,8 +34,8 @@ mypoints<-SpatialPointsDataFrame(coordinates(mypoints),data.frame(id=1:nrow(mypo
 
 image(meuse.grid,att=4,col=c("red","green","blue")) # soil map
 plot(mypoints,add=TRUE) # points
-
-rwhatbufCat(meuse.grid,mypoints,c(500,1000),att=4) # get the number of pixels of each category in each buffer
+  # get the number of pixels of each category in each buffer
+rwhatbufCat(meuse.grid,mypoints,c(500,1000),att=4) 
 
 }
 

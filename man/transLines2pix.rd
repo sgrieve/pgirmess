@@ -25,6 +25,7 @@ transLines2pix(spldf,mindist=100)
 \examples{
 
 # from the sp vignette:
+     library(sp)
      l1 = cbind(c(1,2,3),c(3,2,2))
      l1a = cbind(l1[,1]+.05,l1[,2]+.05)
      l2 = cbind(c(1,2,3),c(1,1.5,1))

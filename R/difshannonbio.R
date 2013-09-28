@@ -6,7 +6,6 @@ function(dat1,dat2,R=1000,probs=c(0.025,0.975)){
 # bootstrap replicates de deux Shannons à partir de deux data.frame
 # du régime alimentaire comportant colonne 1 = catégorie, colonne 2 = biomasse
 
-library(boot)
 
 myboot1<-boot(dat1,function(dat1,i) shannonbio(dat1[i,]),R=R)
 myboot2<-boot(dat2,function(dat1,i) shannonbio(dat1[i,]),R=R)
