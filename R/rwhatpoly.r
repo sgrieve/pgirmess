@@ -1,9 +1,9 @@
 rwhatpoly<-function(sgdf,SP,att=1, NAin=TRUE, num=FALSE){
 	if (NAin) fullgrid(sgdf)<-TRUE
-	polyID<-overlay(sgdf,SP)
+	polyID<-over(sgdf,SP)
 	
-	if (length(sort(unique(overlay(sgdf,SP)))) != length(SP@polygons)) {
-    idx<-1:length(SP@polygons)%in%sort(unique(overlay(sgdf,SP)))
+	if (length(sort(unique(over(sgdf,SP)))) != length(SP@polygons)) {
+    idx<-1:length(SP@polygons)%in%sort(unique(over(sgdf,SP)))
     warning(paste("No pixel in polygon, row number:",which(!idx)))
   }
 	
@@ -16,4 +16,3 @@ rwhatpoly<-function(sgdf,SP,att=1, NAin=TRUE, num=FALSE){
 	}
 	bilan
 }
-

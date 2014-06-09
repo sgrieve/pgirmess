@@ -2,6 +2,7 @@
 thintrack<-function(spdf,mindist=100){
   st<-FALSE
   cds<-coordinates(spdf)
+  cds<-cds[!duplicated(cds),]
   nbb<-1
   cds2<-NULL
    while(!st){

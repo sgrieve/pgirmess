@@ -1,4 +1,4 @@
-3643cca5873311b85c45087b824acf54 *DESCRIPTION
+2685a7c04baf84b360d4465050096ac7 *DESCRIPTION
 56e67cea1f17cefcb5d7b49fb44aee4b *NAMESPACE
 f5559646734b73482f73efbc14a646af *R/CI.r
 a8181a66584bc3024b6134a64b628b02 *R/PermTest.r
@@ -38,13 +38,13 @@ c5f560ab79a38dacb5ba689c3d7c1d16 *R/postxt.R
 8ae3042b33cad846e9726d104118390c *R/rwhatbufCat.r
 6f131fc0d4ba81d337911492668c28ca *R/rwhatbufCat2.r
 5a4dc549f977c9c3c821f7f38db5510a *R/rwhatbufNum.r
-e59f207a12dab48454d8c5e5f19cf89d *R/rwhatpoly.r
+78279ad578a87068c687b44eeddfe723 *R/rwhatpoly.r
 2de2b85430d507e77b2814771fce2118 *R/selMod.r
 bdc1df2bb708ba7713cc62ea3858f8f4 *R/shannon.R
 9e63d0552403d814dd01c6adaf5bbd06 *R/shannonbio.R
 f52b735ff53e6fa1e858e02192ede16a *R/shannonbioboot.R
 e447675fc8e65e4b760f2d70b383cb17 *R/tabcont2categ.R
-aa4a6e13d8ea495e12bdf2e36a49be58 *R/thintrack.r
+6206594f82248b6294c6da3eb721c161 *R/thintrack.r
 2f7a39c062f496e292c9f54c9dc1d116 *R/trans2pix.r
 09d591bbbc7821a774969a10f704f4bf *R/trans2seg.r
 05cd05d85f9301a33d94477a7808cfec *R/transLines2pix.r
