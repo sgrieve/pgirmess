@@ -1,21 +1,23 @@
 \name{mergeTrackObs}
 \alias{mergeTrackObs}
 
-\title{ Merge two SpatialPoints objects, one modelling a track the other observations  }
+\title{ Merge two SpatialPoints or SpatialPointsDataFrame objects, one modelling a track, the other observations  }
 \description{
-  Merge two SpatialPoints objects, one modelling a track the other observations.
+  Merge two SpatialPoints or SpatialPointsDataFrame objects, one modelling a track, the other observations.
 }
 \usage{
-mergeTrackObs(sppdfInt,sppdfObs)
+mergeTrackObs(sppdfInt,sppdfObs,obscol=NULL)
 }
 
 \arguments{
   \item{sppdfInt}{ A \code{\link[sp]{SpatialPoints}} object (the track)}
-  \item{sppdfObs}{A \code{\link[sp]{SpatialPoints}} object (the observations) }
+  \item{sppdfObs}{A \code{\link[sp]{SpatialPoints}} or \code{\link[sp]{SpatialPointsDataFrame}} object (the observations) }
+  \item{obscol}{ The column number in which the number of observations at this point can be found in sppdfObs}
 }
 \details{
-  Road site counts or faeces collections are often carried out along tracks (paths, roads, transects, etc.). Tracks can be discretized in regular intervals e.g. with \code{\link[pgirmess]{transLines2pix}} or \code{\link{thintrack}}, each point being an interval centre. mergeTrackObs uses such a discretized track and sums observations to their nearest track interval. The output is a SpatialPointsDataFrame where each point corresponds to the centre of one track interval. The number of observations in each interval is given in the attribute file.
+  Road site counts or faeces collections are often carried out along tracks (paths, roads, transects, etc.). Tracks can be discretized in regular intervals e.g. with \code{\link[pgirmess]{transLines2pix}} or \code{\link{thintrack}}, each point being an interval centre. mergeTrackObs uses such a discretized track and sums observations to their nearest track interval. The output is a SpatialPointsDataFrame where each point corresponds to the centre of one track interval. The number of observations in each interval is given in the attribute file. If the number of observations at an observation point can be 0 or any positive number, use obscol to identify the column of sppdfObs where this number is stored.
 }
+
 \value{
   A SpatialPointsDataframe, with the following attributes:
    \itemize{ 
@@ -48,19 +50,39 @@ mergeTrackObs(sppdfInt,sppdfObs)
 -15L), class = "data.frame")
     points(obs[,2:3],col="red")
     coordinates(obs)<-~long+lat
-    
-    # example
-    track<-transLines2pix(Sl,0.1)
-    trackObs<-mergeTrackObs(track,obs)
-   
-    par(mfrow=c(1,2))
-    plot(Sl)
-    plot(track,add=TRUE,col="blue")
-    plot(obs,add=TRUE,col="red",pch=1)
-    
-    plot(Sl)
-    plot(track,add=TRUE,col="blue")
-    plot(trackObs,cex=trackObs@data$nObs,pch=19, col="red",add=TRUE)
+obs@data$n<-c(3,4,0,1,1,5,6,4,3,4,4,7,2,2,1) # possibly a count on each location
+
+
+# examples
+
+# one observation on each location
+track<-transLines2pix(Sl,0.1)
+trackObs<-mergeTrackObs(track,obs)
+
+par(mfrow=c(1,2))
+plot(Sl)
+plot(track,add=TRUE,col="blue")
+plot(obs,add=TRUE,col="red",pch=1)
+
+plot(Sl)
+plot(track,add=TRUE,col="blue")
+plot(trackObs,cex=trackObs@data$nObs,pch=19, col="red",add=TRUE)
+
+
+# 0 or more observations on each location
+obs@data$n<-c(3,4,0,1,1,5,6,4,3,4,4,7,2,2,1) # possibly a count on each location
+obs@data
+trackObs<-mergeTrackObs(track,obs,obscol=2)
+
+par(mfrow=c(1,2))
+plot(Sl)
+plot(track,add=TRUE,col="blue")
+plot(obs,add=TRUE,col="red",pch=1)
+
+plot(Sl)
+plot(track,add=TRUE,col="blue")
+plot(trackObs,cex=trackObs@data$nObs/3,pch=19, col="red",add=TRUE)
+
      
 }
 

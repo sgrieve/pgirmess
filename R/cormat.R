@@ -1,19 +1,6 @@
 "cormat" <-
 function(donnees,method="spearman",sep=FALSE){
-    
-    # Giraudoux 25.11.2004
-    # input: un data.frame, meth = "spearman", "pearson", "kendall" (la première lettre suffit)
-    # output: 
-    
-    # si sep = T, une liste comportant :
-    #   - method: la méthode employee
-    #   - coef.estimates: matrice des coefficients
-    #   - p.value: matrice des probabilités de ces coefficients
-    # si sep = F,  une liste comportant :
-    #   - method: la méthode employee
-    #   - prob.cor: matrice avec en triangle haut, les corrélations, en triangle bas, leur probabilité
-    
-
+  
     noms<-names(donnees)
     cells<-matrix(data=rep(0,length(noms)^2),nrow=length(noms),ncol=length(noms))
     cellsp<-cells

@@ -1,12 +1,12 @@
 rwhatbufCat<-function(rast, sites,bufsizes,att=1){
-	cols<-levels(factor(rast@data[,att],exclude=NULL)) # liste des catégories
+	cols<-levels(factor(rast@data[,att],exclude=NULL)) 
 	coords<-coordinates(sites)
 	fintab2<-NULL
 	compteur<-0
 	t0<-Sys.time()
 	cat("Number of buffers to compute: ",length(bufsizes)*nrow(coords),"\n")
 		for(i in bufsizes){
-  		fintab<-matrix(NA,ncol=length(cols),nrow=nrow(coords)) # constitution du tableau pour 1 diamètre de buffer
+  		fintab<-matrix(NA,ncol=length(cols),nrow=nrow(coords)) 
 			colnames(fintab)<-cols
 			rownames(fintab)<-1:nrow(coords)
 			for (j in 1:nrow(coords)) {

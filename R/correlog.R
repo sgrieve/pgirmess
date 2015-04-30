@@ -23,10 +23,10 @@ function(coords,z,method="Moran",nbclass=NULL,...){
      
      lst.res1<-rep(list(NA),nbclass)
      for(i in 1:length(breaks[,1])){
-        xt<-switch(pmatch(method,c("Moran","Geary"),nomatch=3),
-            try(moran.test(lst.z1[[i]], nb2listw(lst.nb1[[i]], style="W")),silent=TRUE,...),
-            try(geary.test(lst.z1[[i]], nb2listw(lst.nb1[[i]], style="W")),silent=TRUE,...),
-            stop("Method must be 'Moran' or 'Geary'"))
+        xt <- switch(pmatch(method, c("Moran", "Geary"), nomatch = 3),
+            try(moran.test(lst.z1[[i]], nb2listw(lst.nb1[[i]],style = "W"), ...), silent = TRUE),
+            try(geary.test(lst.z1[[i]],nb2listw(lst.nb1[[i]], style = "W"), ...), silent = TRUE),
+            stop("Method must be 'Moran' or 'Geary'")) 
         if(inherits(xt,"try-error")) {stop("Bad selection of class breaks, try another one...")}
         else {
             x<-xt$estimate[1]
@@ -64,3 +64,4 @@ function(coords,z,method="Moran",nbclass=NULL,...){
     attributes(x)<-attributes(x)[1:2]
     print(x[,,drop=FALSE])
 }
+
