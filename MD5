@@ -1,11 +1,11 @@
-836923cb679d06f739f448d7627bafe0 *DESCRIPTION
-1fc46ec2f4d9b8a5356e7de08ec08b56 *NAMESPACE
+0a881a8525987eb5e38d1a484b4696ce *DESCRIPTION
+479f707249ec51f09356384a37052110 *NAMESPACE
 f5559646734b73482f73efbc14a646af *R/CI.r
 a8181a66584bc3024b6134a64b628b02 *R/PermTest.r
+cdfad27f553262cbaf591a64f6c1c78b *R/QGIS2sp.R
 18e7ba2692573151f77f6b825947d4e4 *R/Segments.r
 61b17326237fae66b2072999139a561c *R/TukeyHSDs.r
 2fa70dd100b343ee241b98f9417e1a25 *R/classnum.r
-a239e475660bde392d73f2d315db9710 *R/clipQGIS2df.R
 1d2bdd6703d1ed7005d8069510e664e8 *R/cormat.R
 d26fd29aef3a90a214b9b450e98da8cc *R/correlog.R
 c8cb55a2e07d963dab6b26275310e73d *R/date2winter.r
@@ -34,7 +34,7 @@ af434dd6f0864308d3c3e960f8e97a71 *R/polycirc.R
 c5f560ab79a38dacb5ba689c3d7c1d16 *R/postxt.R
 71c4098dc54f76ff12ed7e37b20e25cf *R/print.mc.r
 7aa9b5bfad1a18473b9a48f8023bd732 *R/readGDALbbox.r
-67541f064d2e35d5e359d4797a19b916 *R/readVista.r
+6a37e751bd8e7e1f2a9a465a83a8964c *R/readVista.r
 388c5108f2da2cce90334d674310ea8b *R/rmls.r
 738052ddb20c771913d876eb2c376c6a *R/rwhatbufCat.r
 6f131fc0d4ba81d337911492668c28ca *R/rwhatbufCat2.r
@@ -59,10 +59,10 @@ ebe912ee100356544e403516538c1096 *data/preybiom.rda
 7a734b0a24adb55ab901bca448c6bd68 *data/siegelp179.rda
 c0b9aaef668affbe26080e964f44b4e3 *man/CI.rd
 117aa991984168fa6a9459581a3d8527 *man/PermTest.rd
+f90fd014cbbf1ac91aca206c1ca89108 *man/QGIS2sp.Rd
 f8473822eaffe2fced8d3a93b602a989 *man/Segments.rd
 0a35b7e11fa3ddd9084f75ee39067ed9 *man/TukeyHSDs.rd
 cffa91754a92c69833369ea0358deaee *man/classnum.Rd
-e28b9b5f31b27e0bca3ffc8707f52876 *man/clipQGIS2df.Rd
 e477fbe6fb606e84af7ddcaaa47932cd *man/cormat.Rd
 3a36e47309c61430f19d763a6eda2e3e *man/correlog.Rd
 1c1a3abdb5f860a8bf213d7b14dae96c *man/date2winter.rd
@@ -92,7 +92,7 @@ d6941285e8ba524ff08d17ef1a387c5d *man/polycirc.Rd
 2925552eb8b35da0aeb02135d294e6c5 *man/preybiom.Rd
 a852c753f560e79d72540d2d87aba320 *man/print.mc.Rd
 37da53f8adcf568719bc0f5822d7de20 *man/readGDALbbox.rd
-dffcb8b524b8886e6e0874802a8dd2c5 *man/readVista.rd
+01a6775d23001c976b1115c7f210be47 *man/readVista.rd
 a6a9a3e0a21208d8d904c1e8447a24c6 *man/rmls.rd
 7faad4a1f542451ea91e44c1f7541434 *man/rwhatbufCat.rd
 34631ae0b46d3ae31cac88288a54743c *man/rwhatbufCat2.rd
