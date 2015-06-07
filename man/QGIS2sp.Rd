@@ -6,7 +6,7 @@ Changes a copied-to-clipboard QGIS attribute table into a sp Spatial object or a
 }
 
 \description{
-Read from the clipboard a copy of the QGIS attribute table of a spatial object (points, linestrings, polygons) and convert it into a sp \code{\link[sp]{Spatial-class}} or a \code{\link[base]{data.frame}}.
+Reads from the clipboard a copy of the QGIS attribute table of a spatial object (points, linestrings, polygons) and convert it into a sp \code{\link[sp]{Spatial-class}} or a \code{\link[base]{data.frame}}.
 }
 
 \usage{
@@ -35,15 +35,12 @@ A \code{\link[sp]{SpatialPointsDataFrame}}, \code{\link[sp]{SpatialLinesDataFram
 
 \examples{
 
-
+  if((.Platform$OS.type == "windows") & (interactive())) {
   db <-c("wkt_geom\tname", "POINT(104.55 34.60)\tDENG_LING", "POINT(104.45 34.49)\tDIAO_GOU")
-  writeLines(db,"clipboard")
-  
-\dontrun{
-
+  writeLines(db, "clipboard")
   QGIS2sp() # to write in the console by hand (if copied and paste, one overwrites the clipboard)
-  
-}
+  }
+
 
 }
 

@@ -23,10 +23,12 @@ readVista(i = "garmin", f = "usb:", type="w", SPDF=NULL, invisible=TRUE)
 
 \value{
 If SPDF = NULL (the default) a data frame of four columns:
+
     \item{ident}{waypoint names or track IDs}
     \item{long}{longitude}
     \item{lat}{latitude}
-    \item{altitude}{elevation}    
+    \item{altitude}{elevation}
+
 Information about the data type (waypoints or tracks) and the date of download are stored as attributes.
 
 If a path and filename is specified with the argument SPDF (e.g. SPDF="./mydata.gpx"), GPS data are downloaded as gpx file.
@@ -40,6 +42,7 @@ If a path and filename is specified with the argument SPDF (e.g. SPDF="./mydata.
 \examples{
 
 \dontrun{
+   # a GPS device must be connected
 mywaypoints<-readVista() # download waypoints
 mytracks<-readVista(type="t") # download tracks
 }

@@ -24,5 +24,4 @@ if(!df) {
       names(dfr)[1:2]<-c("long","lat")
       return(dfr)
   }
-
 }

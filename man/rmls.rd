@@ -18,9 +18,7 @@ This function has no arguments. This brings up a modal dialog box with a (scroll
 
 toremove<-NULL
 ls()
-    \dontrun{
-        rmls()# select the object 'toremove' and click OK
-    }
+if(interactive()) rmls() # select the object 'toremove' and click OK
 ls()
 
 }

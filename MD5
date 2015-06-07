@@ -1,8 +1,8 @@
-0a881a8525987eb5e38d1a484b4696ce *DESCRIPTION
+b87554e80e914ee3edf8e56af8e434e9 *DESCRIPTION
 479f707249ec51f09356384a37052110 *NAMESPACE
 f5559646734b73482f73efbc14a646af *R/CI.r
 a8181a66584bc3024b6134a64b628b02 *R/PermTest.r
-cdfad27f553262cbaf591a64f6c1c78b *R/QGIS2sp.R
+f00375e435d9a76dd116335ae25d6baa *R/QGIS2sp.R
 18e7ba2692573151f77f6b825947d4e4 *R/Segments.r
 61b17326237fae66b2072999139a561c *R/TukeyHSDs.r
 2fa70dd100b343ee241b98f9417e1a25 *R/classnum.r
@@ -58,8 +58,8 @@ a91113541a08a330b20bf17b083c8033 *R/write.delim.R
 ebe912ee100356544e403516538c1096 *data/preybiom.rda
 7a734b0a24adb55ab901bca448c6bd68 *data/siegelp179.rda
 c0b9aaef668affbe26080e964f44b4e3 *man/CI.rd
-117aa991984168fa6a9459581a3d8527 *man/PermTest.rd
-f90fd014cbbf1ac91aca206c1ca89108 *man/QGIS2sp.Rd
+57e2f2f58cd9f4cdee40cf68b17e29be *man/PermTest.rd
+c70eac8962a21456b18723374a0f6208 *man/QGIS2sp.Rd
 f8473822eaffe2fced8d3a93b602a989 *man/Segments.rd
 0a35b7e11fa3ddd9084f75ee39067ed9 *man/TukeyHSDs.rd
 cffa91754a92c69833369ea0358deaee *man/classnum.Rd
@@ -76,7 +76,7 @@ a536d26d5773f820d314702f722ff2e7 *man/distNNeigh.rd
 81e61c0fbc1dccdd8b4a749b430196cc *man/distTot.rd
 106e2e0748bfa83de63dee9ba127ff33 *man/expandpol.rd
 e34b2f86409fb418d49a6c1de18cd177 *man/friedmanmc.rd
-ecdd3e64e473acc7a911aeefeb001bbb *man/gps2gpx.rd
+dce7fd20759cb731b7a30844ee36f64f *man/gps2gpx.rd
 c0c023024023c09559fa4dcac3bedd58 *man/kruskalmc.Rd
 48d0679d82c78e9706fecf09f25a097a *man/ks.gof.rd
 b5cf4c340f92ab956a657591a9335d28 *man/mergeTrackObs.rd
@@ -92,8 +92,8 @@ d6941285e8ba524ff08d17ef1a387c5d *man/polycirc.Rd
 2925552eb8b35da0aeb02135d294e6c5 *man/preybiom.Rd
 a852c753f560e79d72540d2d87aba320 *man/print.mc.Rd
 37da53f8adcf568719bc0f5822d7de20 *man/readGDALbbox.rd
-01a6775d23001c976b1115c7f210be47 *man/readVista.rd
-a6a9a3e0a21208d8d904c1e8447a24c6 *man/rmls.rd
+47e567490c7c922863ab2c8d26651ac1 *man/readVista.rd
+cba933d7c81b0926365f3c6290456417 *man/rmls.rd
 7faad4a1f542451ea91e44c1f7541434 *man/rwhatbufCat.rd
 34631ae0b46d3ae31cac88288a54743c *man/rwhatbufCat2.rd
 f3068edfaf6d0dc3df6c610347ee5755 *man/rwhatbufNum.rd
@@ -108,7 +108,7 @@ c728af3e50999f2b594db65fb377472f *man/siegelp179.Rd
 7baa95e894ca2527d60b5ec1cb27d23c *man/trans2pix.rd
 c6f7c8c09f04a482da4872f14777e0b9 *man/trans2seg.rd
 5afba01d80d4e89c5a74466b1027857a *man/transLines2pix.rd
-bcbec7bf275f878b5e760632ec6de5bc *man/uploadGPS.rd
+cd4f9b2fc94e2f74c365de1b2c07d3af *man/uploadGPS.rd
 323a2fad073e2237113430940ffc1f53 *man/val4symb.Rd
 42b7453b77fb851c7d0f84d9241920a9 *man/valchisq.Rd
 bbd992365835ae974669474b83a0af2f *man/write.delim.Rd

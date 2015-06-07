@@ -24,6 +24,7 @@ The function calls gpsbabel via the system. The gpsbabel program must be present
 \examples{
 
 \dontrun{
+  # a GPS device must be connected
 gps2gpx() # download waypoints and print to the console
 gps2gpx(t="t") # download tracks and print to the console
 gps2gpx(filename="myfile") # download waypoints and write a gpx file
