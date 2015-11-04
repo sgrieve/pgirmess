@@ -21,7 +21,7 @@ The function reads the raster file on the hard disk as many times as buffers to 
 
 \value{ A data.frame or a list of lists giving for each buffer size (top level of the list of lists) the number of pixels of each category value within the buffer at each point site}
 
-\seealso{ \code{\link[pgirmess]{rwhatbufNum}}, \code{\link[pgirmess]{rwhatpoly}}, \code{\link[pgirmess]{rwhatbufCat}} }
+\seealso{\code{\link[sp]{over}}, \code{\link[pgirmess]{rwhatbufNum}}, \code{\link[pgirmess]{rwhatbufCat}} }
 
 \examples{
 

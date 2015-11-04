@@ -18,7 +18,7 @@
 
 \value{ A list of lists: top level, the buffer size; second level, the values of the raster map for each point site within the buffer}
 
-\seealso{ \code{\link[pgirmess]{rwhatbufCat}}, \code{\link[pgirmess]{rwhatpoly}}, \code{\link[pgirmess]{rwhatbufCat2}}}
+\seealso{ \code{\link[sp]{over}}, \code{\link[pgirmess]{rwhatbufCat}}, \code{\link[pgirmess]{rwhatbufCat2}}}
 
 \examples{
 

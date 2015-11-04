@@ -1,6 +1,6 @@
 Package: pgirmess
-Date: 2015-06-07
-Version: 1.6.2
+Date: 2015-11-04
+Version: 1.6.3
 Title: Data Analysis in Ecology
 Author: Patrick Giraudoux <patrick.giraudoux@univ-fcomte.fr>
 Maintainer: Patrick Giraudoux <patrick.giraudoux@univ-fcomte.fr>
@@ -12,6 +12,6 @@ Description: Miscellaneous functions for data analysis in ecology, with special 
 License: GPL (>= 2)
 URL: http://perso.orange.fr/giraudoux
 NeedsCompilation: no
-Packaged: 2015-06-07 09:09:31 UTC; pgiraudo
+Packaged: 2015-11-04 17:17:52 UTC; pgiraudo
 Repository: CRAN
-Date/Publication: 2015-06-07 11:30:12
+Date/Publication: 2015-11-04 19:04:45

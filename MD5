@@ -1,5 +1,5 @@
-b87554e80e914ee3edf8e56af8e434e9 *DESCRIPTION
-479f707249ec51f09356384a37052110 *NAMESPACE
+5212f6a2462ab1534fa7af18b7ec2a06 *DESCRIPTION
+2c8a56df3bd10831ecc8d08c5cdd4700 *NAMESPACE
 f5559646734b73482f73efbc14a646af *R/CI.r
 a8181a66584bc3024b6134a64b628b02 *R/PermTest.r
 f00375e435d9a76dd116335ae25d6baa *R/QGIS2sp.R
@@ -39,7 +39,6 @@ c5f560ab79a38dacb5ba689c3d7c1d16 *R/postxt.R
 738052ddb20c771913d876eb2c376c6a *R/rwhatbufCat.r
 6f131fc0d4ba81d337911492668c28ca *R/rwhatbufCat2.r
 5a4dc549f977c9c3c821f7f38db5510a *R/rwhatbufNum.r
-78279ad578a87068c687b44eeddfe723 *R/rwhatpoly.r
 2de2b85430d507e77b2814771fce2118 *R/selMod.r
 bdc1df2bb708ba7713cc62ea3858f8f4 *R/shannon.R
 37c0dfe667cb18b134a3a97478074f68 *R/shannonbio.R
@@ -55,8 +54,8 @@ f9f9b4d76a532bfdd563412007881831 *R/valchisq.R
 a91113541a08a330b20bf17b083c8033 *R/write.delim.R
 32cab401524e000324f26c2a9763404a *R/writeGPX.r
 8984e2b417c742acf8e468d536ad2506 *R/writePRJ.r
-ebe912ee100356544e403516538c1096 *data/preybiom.rda
-7a734b0a24adb55ab901bca448c6bd68 *data/siegelp179.rda
+b220209eac25cf8541832302e2c66bbd *data/preybiom.rda
+8b6c4f1dbc3b76a53f4e8bab9910de51 *data/siegelp179.rda
 c0b9aaef668affbe26080e964f44b4e3 *man/CI.rd
 57e2f2f58cd9f4cdee40cf68b17e29be *man/PermTest.rd
 c70eac8962a21456b18723374a0f6208 *man/QGIS2sp.Rd
@@ -94,10 +93,9 @@ a852c753f560e79d72540d2d87aba320 *man/print.mc.Rd
 37da53f8adcf568719bc0f5822d7de20 *man/readGDALbbox.rd
 47e567490c7c922863ab2c8d26651ac1 *man/readVista.rd
 cba933d7c81b0926365f3c6290456417 *man/rmls.rd
-7faad4a1f542451ea91e44c1f7541434 *man/rwhatbufCat.rd
-34631ae0b46d3ae31cac88288a54743c *man/rwhatbufCat2.rd
-f3068edfaf6d0dc3df6c610347ee5755 *man/rwhatbufNum.rd
-558668d126f45b5755ca9f983b9abbbd *man/rwhatpoly.rd
+05a43c8914b49709d745289c79c4a7ee *man/rwhatbufCat.rd
+e705bf4c61c40d6a378cef20827b6388 *man/rwhatbufCat2.rd
+43c943ea7e242b0532cc921ce20ef85a *man/rwhatbufNum.rd
 fc1a1a2fd28cbf49d77609c0136cd301 *man/selMod.Rd
 28918aa3db60feac2e812ee1e3bc4d4d *man/shannon.Rd
 579fdec5926eac70d13889a9acca9f2b *man/shannonbio.Rd

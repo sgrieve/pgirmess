@@ -18,7 +18,7 @@
 
 \value{ A dataframe, with the buffer size as first column, the site ID as second column. The other colums are the pixel frequency of each category}
 
-\seealso{ \code{\link[pgirmess]{rwhatbufNum}}, \code{\link[pgirmess]{rwhatpoly}}, \code{\link[pgirmess]{rwhatbufCat2}}}
+\seealso{\code{\link[sp]{over}}, \code{\link[pgirmess]{rwhatbufNum}}, \code{\link[pgirmess]{rwhatbufCat2}}}
 
 \examples{
 
