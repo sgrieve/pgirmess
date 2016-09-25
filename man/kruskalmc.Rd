@@ -2,7 +2,7 @@
 \alias{kruskalmc}
 \alias{kruskalmc.default}
 \alias{kruskalmc.formula}
-
+\encoding{latin1}
 \title{ Multiple comparison test after Kruskal-Wallis }
 \description{
   Multiple comparison test between treatments or treatments versus control after Kruskal-Wallis test
@@ -25,9 +25,9 @@ kruskalmc(resp,...)
 
 \details{
 
-  When the obtained value of a Kruskal-Wallis test is significant, it indicates that at least one of the groups is different from at least one of the others. This test helps determining which groups are different with pairwise comparisons adjusted appropriately. Those pairs of groups which have observed differences higher than a critical value are considered statistically different at a given significance level. Three type of multiple comparisons are implemented: comparisons between treatments, 'one-tailed' and 'two-tailed' comparison treatments versus control.  The first factor level is considered the control. NAs are omitted from data before processing.
+When the value of a Kruskal-Wallis test is significant, it indicates that at least one of the groups is different from at least one of the others. This test helps determining which groups are different with pairwise comparisons adjusted appropriately for multiple comparisons. Those pairs of groups which have observed differences higher than a critical value are considered statistically different at a given significance level. Three types of multiple comparisons are implemented: comparisons between treatments, 'one-tailed' and 'two-tailed' comparison treatments versus control.  The first factor level is considered the control. NAs are omitted from data before processing.
 	
-	For further details please consider the refence below where the method is fully described. One may also want to visit \url{http://pagesperso-orange.fr/giraudoux/#pgirmess}
+For further details please consider the refence below where the method is fully described, or visit \url{http://pagesperso-orange.fr/giraudoux/#pgirmess} where a copy of the corresponding book section is downloadable.
 }
 
 \value{
@@ -37,11 +37,11 @@ kruskalmc(resp,...)
   \item{dif.com}{a data.frame with observed and critical differences}
 }
 
-\note{formula method adapted on Derek Ogle's suggestion}
+\note{Two alternative methods are proposed in the section 'see also', on François Gillet's suggestion. The three methods do not give necessarily the same results, and the why is still to investigate}
 
 \references{ Siegel and Castellan (1988) Non parametric statistics for the behavioural sciences. MacGraw Hill Int., New York. pp 213-214  }
 
-\seealso{ \code{\link{kruskal.test}}, to reorder factor levels see \code{\link{relevel}}}
+\seealso{ \code{\link{kruskal.test}}; to reorder factor levels see \code{\link{relevel}}; for other functions about median multiple comparison see \code{\link[PMCMR]{posthoc.kruskal.conover.test}}, \code{\link[agricolae]{kruskal}}}
 
 \examples{
 resp<-c(0.44,0.44,0.54,0.32,0.21,0.28,0.7,0.77,0.48,0.64,0.71,0.75,0.8,0.76,0.34,0.80,0.73,0.8)

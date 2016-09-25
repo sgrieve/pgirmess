@@ -1,6 +1,6 @@
-b161313fb4031fbffc2d8d70648514c1 *DESCRIPTION
-2c8a56df3bd10831ecc8d08c5cdd4700 *NAMESPACE
-f5559646734b73482f73efbc14a646af *R/CI.r
+aa330ed79ba67676f98d609f1f7cc232 *DESCRIPTION
+1dfd6e186f47d8bb6a745bd5e3dc4213 *NAMESPACE
+9c088c0610c8a1a0a4461fd5c5cb4ac7 *R/CI.r
 a8181a66584bc3024b6134a64b628b02 *R/PermTest.r
 f00375e435d9a76dd116335ae25d6baa *R/QGIS2sp.R
 18e7ba2692573151f77f6b825947d4e4 *R/Segments.r
@@ -18,6 +18,7 @@ d2cb30ab0ff7e00cf3edeacd303f64c6 *R/distNode.r
 431960bfce84ffe0125bdfd94412d6df *R/distSeg.r
 4520d7135d755b93517093f0c92332b9 *R/distTot.r
 a6965ef004850243c7b75c6124aa127f *R/expandpoly.r
+edcf3115e218e26942a109fdb49e7d5a *R/findR.R
 203a9c8d8cc539807e3b36b27d49d471 *R/friedmanmc.R
 b065e23e24e428de231768ebfce970a4 *R/gps2gpx.r
 ebfd53526d26ca59ddfec59c14e65bf0 *R/kruskalmc.r
@@ -54,9 +55,9 @@ f9f9b4d76a532bfdd563412007881831 *R/valchisq.R
 a91113541a08a330b20bf17b083c8033 *R/write.delim.R
 32cab401524e000324f26c2a9763404a *R/writeGPX.r
 8984e2b417c742acf8e468d536ad2506 *R/writePRJ.r
-b5239d9f068879d4ccc712caa852b511 *data/preybiom.rda
-94a171021ae46cb7c19625b80f10690f *data/siegelp179.rda
-c0b9aaef668affbe26080e964f44b4e3 *man/CI.rd
+25cdc02fb10c1592dffb28676122a5b7 *data/preybiom.rda
+70c79b9022cd177d5cfa114c9a96aaf7 *data/siegelp179.rda
+408f0ab5bba31b1378c36827a89ec1b9 *man/CI.rd
 57e2f2f58cd9f4cdee40cf68b17e29be *man/PermTest.rd
 c70eac8962a21456b18723374a0f6208 *man/QGIS2sp.rd
 f8473822eaffe2fced8d3a93b602a989 *man/Segments.rd
@@ -73,10 +74,11 @@ a536d26d5773f820d314702f722ff2e7 *man/distNNeigh.rd
 27225a80d8d066e3d0a1619d68639a61 *man/distNode.rd
 84edddf8cf919540fc0adfb4879d4b74 *man/distSeg.rd
 81e61c0fbc1dccdd8b4a749b430196cc *man/distTot.rd
-106e2e0748bfa83de63dee9ba127ff33 *man/expandpol.rd
+0cd033d3b1d7e47858b910aedafaa42a *man/expandpoly.rd
+61f4afbf5e6a790e7eb18f997acc131e *man/findR.rd
 e34b2f86409fb418d49a6c1de18cd177 *man/friedmanmc.rd
 dce7fd20759cb731b7a30844ee36f64f *man/gps2gpx.rd
-c0c023024023c09559fa4dcac3bedd58 *man/kruskalmc.Rd
+6f8149345a08ead508c74a62e78b4aa6 *man/kruskalmc.Rd
 48d0679d82c78e9706fecf09f25a097a *man/ks.gof.rd
 b5cf4c340f92ab956a657591a9335d28 *man/mergeTrackObs.rd
 3894f4c1003036be9f3d96c15ac419fa *man/pairsrp.rd
@@ -85,7 +87,7 @@ b5cf4c340f92ab956a657591a9335d28 *man/mergeTrackObs.rd
 e44a3063a3bfbe368cb4d62da989be84 *man/permcont.rd
 5ba44c9027ea080424d28a4bfb466a5d *man/piankabio.rd
 dc903255369a6204ea007a57cd3825d6 *man/piankabioboot.rd
-d6941285e8ba524ff08d17ef1a387c5d *man/polycirc.rd
+5f73c942bfbacb2f0aaa3fde96016104 *man/polycirc.rd
 0c5b4c3742347653621df8264ff01a65 *man/polycirc2.rd
 3fdc5f85efcd996236307c77ca647b2c *man/postxt.rd
 2925552eb8b35da0aeb02135d294e6c5 *man/preybiom.rd

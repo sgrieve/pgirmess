@@ -10,12 +10,16 @@ expandpoly(mypol, fact)
 }
 
 \arguments{
-  \item{mypol}{ matrix or data.frame of polygon coordinates }
-  \item{fact}{ expansion factor (eg 2 = 2 times, 0.5 = half, etc...) }
+  \item{mypol}{matrix or data.frame of polygon coordinates }
+  \item{fact}{expansion factor }
 }
 
 \value{
   A matrix of polygon coordinates
+}
+
+\details{
+  The polygon area obtained after expansion is equal to \eqn{fact^2} times the original polygon area 
 }
 
 \seealso{ \code{\link{polygon}} }

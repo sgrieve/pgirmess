@@ -3,22 +3,27 @@
 
 \title{Confidence interval of percentages}
 \description{
-  Provides a n x 2 matrix with the lower limit (column 1) and upper limit (column 2) of the 95 percent confidence interval of percentages
+  Computes the lower limit and upper limit of the 95 percent confidence interval of percentage estimates 
 }
 \usage{
-CI(x, y, totrials = FALSE)
+CI(x, ...)
 }
-%- maybe also 'usage' for other objects documented here.
+
 \arguments{
-  \item{x}{ a vector with the number of positive observations }
-  \item{y}{ a vector of the same length as x with the number of negative observations, or of the total number of observations }
-  \item{totrials}{ if false (the default) y is the number of negative observations; if true, y is the total number of observations }
+  \item{x}{ a two-dimensional table, matrix or data.frame with 2 columns, giving the counts of successes and failures, respectively }
+  \item{\dots}{ other arguments to pass to \code{\link{prop.test}}, eg \code{conf.level}  }
+
 }
 \details{
-  Wrapper of prop.test(). 
+  Simple wrapper of \code{\link{prop.test}}. The default confidence interval is 95 percent, but can be modified passing values to \code{\link{prop.test}} by the \code{conf.level} argument.
 }
 \value{
-  A matrix of length(x) rows and 2 columns. Column 1: lower limit; column 2: upper limit of the 95 percent confidence interval
+  A 3 column matrix. 
+  \itemize{
+    \item Column 1: percentage estimate
+    \item Column 2: lower limit of the confidence interval
+    \item column 3: upper limit of the confidence interval
+  }
 }
 
 \seealso{ \code{\link{prop.test}}}
@@ -26,11 +31,8 @@ CI(x, y, totrials = FALSE)
 
 x<-c(2,10,7,8,7) # eg: number of positive cases
 y<-c(56,22,7,20,5)# eg: number of negative cases
-CI(x,y)
-
-x<-c(2,10,7,8,7) # eg: number of positive cases
-y<-c(4,11,7,16,10)# eg: total number of cases
-CI(x,y,totrials=TRUE)
+CI(cbind(x,y))
+CI(cbind(x,y), conf.level=0.99)
 
 }
 \keyword{ htest }% at least one, from doc/KEYWORDS

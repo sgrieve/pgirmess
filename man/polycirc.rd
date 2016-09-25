@@ -21,9 +21,8 @@ polycirc(radius, pts = c(0, 0), nbr = 50)
   A matrix of coordinates.
 }
 
-\author{ Patrick Giraudoux <pgiraudo@univ-fcomte.fr> }
 
-\seealso{ \code{\link{polygon}} }
+\seealso{ \code{\link{polygon}},\code{\link[pgirmess]{findR}}}
 \examples{
 plot(1:10,1:10,type="n",asp=1)
 polygon(polycirc(5),col="blue")
