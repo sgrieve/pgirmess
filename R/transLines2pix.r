@@ -22,5 +22,7 @@ intervalles<-NULL
 for(i in 1:length(spldf2.lst)) intervalles<-rbind(intervalles,spldf2.lst[[i]])
 intervalles<-data.frame(ID=1:nrow(intervalles),intervalles)
 coordinates(intervalles)<-~X1+X2
+proj4string(intervalles)<-proj4string(spldf)
 intervalles
+
 }

@@ -25,7 +25,7 @@ distSeg(mydata,decdeg=FALSE)
     }
 }
 \value{
-  A vector of distances
+  A vector of distances, possibly with the attribute 'NaNcoerced2zero' with the row numbers of the distances that have been coerced to zero if any.
 }
 
 \seealso{\code{\link[pgirmess]{distNode}}, \code{\link[pgirmess]{distTot}}}
