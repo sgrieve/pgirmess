@@ -7,7 +7,7 @@ distSeg<-function(mydata,decdeg=FALSE){
       attributes(vect)$NaNcoerced2zero<-which(is.na(vect))
       vect[is.na(vect)]<-0
       warning("One ore more computings (likely between duplicated coordinates) have produced NaN and have been coerced to zero")
-      vect
     }
+    vect
     }
 }

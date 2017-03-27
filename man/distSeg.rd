@@ -23,6 +23,7 @@ distSeg(mydata,decdeg=FALSE)
         \item 1 minute of arc is 1 nautical mile 
         \item 1 nautical mile is 1.852 km
     }
+  When computing with decdeg=TRUE duplicated coordinates strictly identical can lead to produce NaN. The corresponding distance is coerced to zero with warnings and if so, an attribute 'NaNcoerced2zero' with the row numbers of the distances that have been coerced to zero is created
 }
 \value{
   A vector of distances, possibly with the attribute 'NaNcoerced2zero' with the row numbers of the distances that have been coerced to zero if any.

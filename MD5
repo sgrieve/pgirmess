@@ -1,4 +1,4 @@
-3ff0f6723665d780bf6fe57a3f3e9ef5 *DESCRIPTION
+2028f78d5834734f594d91f83da13c66 *DESCRIPTION
 1dfd6e186f47d8bb6a745bd5e3dc4213 *NAMESPACE
 9c088c0610c8a1a0a4461fd5c5cb4ac7 *R/CI.r
 a8181a66584bc3024b6134a64b628b02 *R/PermTest.r
@@ -15,7 +15,7 @@ c8cb55a2e07d963dab6b26275310e73d *R/date2winter.r
 3ffd267cd6acff60b4e5ba538fa7c7ce *R/dirSeg.r
 632dff977eec333dfbaaa8638466cea6 *R/distNNeigh.r
 d2cb30ab0ff7e00cf3edeacd303f64c6 *R/distNode.r
-5d81f20c5fcbda0e78b39fc2bc696d95 *R/distSeg.r
+708d2c9e669de7235bcbeb91b9328860 *R/distSeg.r
 4520d7135d755b93517093f0c92332b9 *R/distTot.r
 a6965ef004850243c7b75c6124aa127f *R/expandpoly.r
 edcf3115e218e26942a109fdb49e7d5a *R/findR.R
@@ -72,7 +72,7 @@ dda66b76c55a391828c5f65e4747e47e *man/difshannonbio.rd
 188bf13e6b866833213b51570f3d8e8a *man/dirSeg.rd
 a536d26d5773f820d314702f722ff2e7 *man/distNNeigh.rd
 27225a80d8d066e3d0a1619d68639a61 *man/distNode.rd
-ce14bb5cccbb913ed2c544db5736fd0f *man/distSeg.rd
+655079c7a2debc6792e1d0ab340b6169 *man/distSeg.rd
 81e61c0fbc1dccdd8b4a749b430196cc *man/distTot.rd
 0cd033d3b1d7e47858b910aedafaa42a *man/expandpoly.rd
 61f4afbf5e6a790e7eb18f997acc131e *man/findR.rd
