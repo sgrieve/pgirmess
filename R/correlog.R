@@ -1,5 +1,5 @@
 "correlog" <-
-function(coords,z,method="Moran",nbclass=NULL,nbins=50...){
+function(coords,z,method="Moran",nbclass=NULL,nbins=50,...){
     coords<-as.matrix(coords)
     matdist<-dist(coords)
     if (is.null(nbclass)) nbclass<-nclass.Sturges(matdist)
