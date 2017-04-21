@@ -9,6 +9,7 @@ function(coords,z,method="Moran",nbclass=NULL,nbins=50,...){
     breaks<-cbind(breaks1[1:length(breaks1)-1],breaks2[2:length(breaks2)])
     breaks[1,1] <- breaks[1,1] - 1e-6 # to avoid exclusion of points on the limit (Colin Beale)
     print(breaks)
+    print(coords)
 
     lst.nb1<-rep(list(NA),nbclass)
     lst.z1<-rep(list(NA),nbclass)
