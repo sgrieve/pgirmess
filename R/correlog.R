@@ -8,25 +8,27 @@ function(coords,z,method="Moran",nbclass=NULL,...){
     breaks2<-breaks1+0.000001
     breaks<-cbind(breaks1[1:length(breaks1)-1],breaks2[2:length(breaks2)])
     breaks[1,1] <- breaks[1,1] - 1e-6 # to avoid exclusion of points on the limit (Colin Beale)
-    
+    print(breaks)
+    print(breaks[i,1])
+    print(breaks[i,2])
     lst.nb1<-rep(list(NA),nbclass)
     lst.z1<-rep(list(NA),nbclass)
     for(i in 1:length(breaks[,1])){
         lst.z1[[i]]<-z
         lst.nb1[[i]]<-dnearneigh(coords, breaks[i,1],breaks[i,2])
         zero<-which(card(lst.nb1[[i]])==0)
-        if (length(zero)>0){ 
+        if (length(zero)>0){
             lst.nb1[[i]]<-dnearneigh(coords[-zero,], breaks[i,1],breaks[i,2])
             lst.z1[[i]]<-z[-zero]
         }
      }
-     
+
      lst.res1<-rep(list(NA),nbclass)
      for(i in 1:length(breaks[,1])){
         xt <- switch(pmatch(method, c("Moran", "Geary"), nomatch = 3),
             try(moran.test(lst.z1[[i]], nb2listw(lst.nb1[[i]],style = "W"), ...), silent = TRUE),
             try(geary.test(lst.z1[[i]],nb2listw(lst.nb1[[i]], style = "W"), ...), silent = TRUE),
-            stop("Method must be 'Moran' or 'Geary'")) 
+            stop("Method must be 'Moran' or 'Geary'"))
         if(inherits(xt,"try-error")) {stop("Bad selection of class breaks, try another one...")}
         else {
             x<-xt$estimate[1]
@@ -35,7 +37,7 @@ function(coords,z,method="Moran",nbclass=NULL,...){
         }
         lst.res1[[i]]<-c(x=x,p=p,N=N)
       }
-      
+
       meth<-names(xt[[3]][1])
       mat<-matrix(unlist(lst.res1),ncol=3,byrow=TRUE)
       res<-cbind(dist.class=rowMeans(breaks),coef=mat[,1],p.value=mat[,2],n=mat[,3])
@@ -64,4 +66,3 @@ function(coords,z,method="Moran",nbclass=NULL,...){
     attributes(x)<-attributes(x)[1:2]
     print(x[,,drop=FALSE])
 }
-
