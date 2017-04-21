@@ -25,7 +25,8 @@ function(coords,z,method="Moran",nbclass=NULL,nbins=50,...){
      }
 
      lst.res1<-rep(list(NA),nbclass)
-     for(i in 1:length(breaks[,1])){
+     #for(i in 1:length(breaks[,1])){
+     for(i in 1:250){
         xt <- switch(pmatch(method, c("Moran", "Geary"), nomatch = 3),
             try(moran.test(lst.z1[[i]], nb2listw(lst.nb1[[i]],style = "W"), ...), silent = TRUE),
             try(geary.test(lst.z1[[i]],nb2listw(lst.nb1[[i]], style = "W"), ...), silent = TRUE),
