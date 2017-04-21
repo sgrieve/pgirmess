@@ -8,7 +8,7 @@ function(coords,z,method="Moran",nbclass=NULL,nbins=50,...){
     breaks2<-breaks1+0.000001
     breaks<-cbind(breaks1[1:length(breaks1)-1],breaks2[2:length(breaks2)])
     breaks[1,1] <- breaks[1,1] - 1e-6 # to avoid exclusion of points on the limit (Colin Beale)
-    print(breaks)
+    print(breaks[])
 
     lst.nb1<-rep(list(NA),nbclass)
     lst.z1<-rep(list(NA),nbclass)
@@ -42,7 +42,7 @@ function(coords,z,method="Moran",nbclass=NULL,nbins=50,...){
 
       meth<-names(xt[[3]][1])
       mat<-matrix(unlist(lst.res1),ncol=3,byrow=TRUE)
-      res<-cbind(dist.class=rowMeans(breaks[1:250]),coef=mat[,1],p.value=mat[,2],n=mat[,3])
+      res<-cbind(dist.class=rowMeans(breaks[1:250,1:2]),coef=mat[,1],p.value=mat[,2],n=mat[,3])
       attributes(res)<-c(attributes(res),list(Method=meth))
       class(res)<-c("correlog","matrix")
       res
