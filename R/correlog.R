@@ -8,7 +8,7 @@ function(coords,z,method="Moran",nbclass=NULL,nbins=50,...){
     breaks2<-breaks1+0.000001
     breaks<-cbind(breaks1[1:length(breaks1)-1],breaks2[2:length(breaks2)])
     breaks[1,1] <- breaks[1,1] - 1e-6 # to avoid exclusion of points on the limit (Colin Beale)
-    print(breaks[])
+
 
     lst.nb1<-rep(list(NA),nbclass)
     lst.z1<-rep(list(NA),nbclass)
@@ -27,6 +27,7 @@ function(coords,z,method="Moran",nbclass=NULL,nbins=50,...){
      lst.res1<-rep(list(NA),nbclass)
      #for(i in 1:length(breaks[,1])){
      for(i in 1:250){
+        print(i)
         xt <- switch(pmatch(method, c("Moran", "Geary"), nomatch = 3),
             try(moran.test(lst.z1[[i]], nb2listw(lst.nb1[[i]],style = "W"), ...), silent = TRUE),
             try(geary.test(lst.z1[[i]],nb2listw(lst.nb1[[i]], style = "W"), ...), silent = TRUE),
