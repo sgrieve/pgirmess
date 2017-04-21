@@ -8,7 +8,7 @@ function(coords,z,method="Moran",nbclass=NULL,nbins=50,...){
     breaks2<-breaks1+0.000001
     breaks<-cbind(breaks1[1:length(breaks1)-1],breaks2[2:length(breaks2)])
     breaks[1,1] <- breaks[1,1] - 1e-6 # to avoid exclusion of points on the limit (Colin Beale)
-    #print(breaks)
+    print(breaks)
 
     lst.nb1<-rep(list(NA),nbclass)
     lst.z1<-rep(list(NA),nbclass)
@@ -17,7 +17,7 @@ function(coords,z,method="Moran",nbclass=NULL,nbins=50,...){
         lst.z1[[i]]<-z
         lst.nb1[[i]]<-dnearneigh(coords, breaks[i,1],breaks[i,2])
         zero<-which(card(lst.nb1[[i]])==0)
-        print(zero)
+
         if (length(zero)>0){
             lst.nb1[[i]]<-dnearneigh(coords[-zero,], breaks[i,1],breaks[i,2])
             lst.z1[[i]]<-z[-zero]
