@@ -1,10 +1,10 @@
 "correlog" <-
-function(coords,z,method="Moran",nbclass=NULL,...){
+function(coords,z,method="Moran",nbclass=NULL,nbins=50...){
     coords<-as.matrix(coords)
     matdist<-dist(coords)
     if (is.null(nbclass)) nbclass<-nclass.Sturges(matdist)
     etendue<-range(matdist)
-    breaks1<-seq(etendue[1],etendue[2],l=500)
+    breaks1<-seq(etendue[1],etendue[2],l=nbins)
     breaks2<-breaks1+0.000001
     breaks<-cbind(breaks1[1:length(breaks1)-1],breaks2[2:length(breaks2)])
     breaks[1,1] <- breaks[1,1] - 1e-6 # to avoid exclusion of points on the limit (Colin Beale)
