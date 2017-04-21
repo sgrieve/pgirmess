@@ -42,7 +42,7 @@ function(coords,z,method="Moran",nbclass=NULL,nbins=50,...){
 
       meth<-names(xt[[3]][1])
       mat<-matrix(unlist(lst.res1),ncol=3,byrow=TRUE)
-      res<-cbind(dist.class=rowMeans(breaks),coef=mat[,1],p.value=mat[,2],n=mat[,3])
+      res<-cbind(dist.class=rowMeans(breaks[1:250]),coef=mat[,1],p.value=mat[,2],n=mat[,3])
       attributes(res)<-c(attributes(res),list(Method=meth))
       class(res)<-c("correlog","matrix")
       res
