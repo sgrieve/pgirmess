@@ -12,7 +12,8 @@ function(coords,z,method="Moran",nbclass=NULL,nbins=50,...){
 
     lst.nb1<-rep(list(NA),nbclass)
     lst.z1<-rep(list(NA),nbclass)
-    for(i in 1:length(breaks[,1])){
+    #for(i in 1:length(breaks[,1])){
+    for(i in 1:250){
         lst.z1[[i]]<-z
         lst.nb1[[i]]<-dnearneigh(coords, breaks[i,1],breaks[i,2])
         zero<-which(card(lst.nb1[[i]])==0)
