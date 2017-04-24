@@ -1,5 +1,5 @@
 "correlog" <-
-function(coords,z,method="Moran",nbclass=NULL,nbins=50,...){
+function(coords,z,method="Moran",nbclass=NULL,nbins=50,limit=250,...){
     coords<-as.matrix(coords)
     matdist<-dist(coords)
     if (is.null(nbclass)) nbclass<-nclass.Sturges(matdist)
@@ -9,11 +9,12 @@ function(coords,z,method="Moran",nbclass=NULL,nbins=50,...){
     breaks<-cbind(breaks1[1:length(breaks1)-1],breaks2[2:length(breaks2)])
     breaks[1,1] <- breaks[1,1] - 1e-6 # to avoid exclusion of points on the limit (Colin Beale)
 
+    print(breaks)
 
     lst.nb1<-rep(list(NA),nbclass)
     lst.z1<-rep(list(NA),nbclass)
     #for(i in 1:length(breaks[,1])){
-    for(i in 1:250){
+    for(i in 1:limit){
         print(i)
         lst.z1[[i]]<-z
         lst.nb1[[i]]<-dnearneigh(coords, breaks[i,1],breaks[i,2])
@@ -27,7 +28,7 @@ function(coords,z,method="Moran",nbclass=NULL,nbins=50,...){
 
      lst.res1<-rep(list(NA),nbclass)
      #for(i in 1:length(breaks[,1])){
-     for(i in 1:250){
+     for(i in 1:limit){
         print(i)
         xt <- switch(pmatch(method, c("Moran", "Geary"), nomatch = 3),
             try(moran.test(lst.z1[[i]], nb2listw(lst.nb1[[i]],style = "W"), ...), silent = TRUE),
@@ -44,7 +45,7 @@ function(coords,z,method="Moran",nbclass=NULL,nbins=50,...){
 
       meth<-names(xt[[3]][1])
       mat<-matrix(unlist(lst.res1),ncol=3,byrow=TRUE)
-      res<-cbind(dist.class=rowMeans(breaks[1:250,1:2]),coef=mat[,1],p.value=mat[,2],n=mat[,3])
+      res<-cbind(dist.class=rowMeans(breaks[1:limit,1:2]),coef=mat[,1],p.value=mat[,2],n=mat[,3])
       attributes(res)<-c(attributes(res),list(Method=meth))
       class(res)<-c("correlog","matrix")
       res
